@@ -1,0 +1,2288 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>محصولات | Viora</title>
+
+
+    <!-- =========================
+         FONT
+    ========================== -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+
+        /* =========================
+           RESET
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            font-family: "Vazirmatn", sans-serif;
+
+            background: #f7f3e9;
+
+            color: #35483d;
+
+            overflow-x: hidden;
+        }
+
+
+        a {
+
+            text-decoration: none;
+
+            color: inherit;
+        }
+
+
+        button,
+        input,
+        select {
+
+            font-family: inherit;
+        }
+
+
+        button {
+
+            cursor: pointer;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================== */
+
+        header {
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+            height: 75px;
+
+            background:
+                rgba(255,253,247,0.96);
+
+            backdrop-filter: blur(12px);
+
+            border-bottom:
+                1px solid #e3e5de;
+        }
+
+
+        .navbar {
+
+            max-width: 1200px;
+
+            height: 100%;
+
+            margin: auto;
+
+            padding: 0 25px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+        }
+
+
+        .logo {
+
+            font-size: 27px;
+
+            font-weight: 800;
+
+            letter-spacing: 4px;
+
+            color: #708b79;
+        }
+
+
+        .nav-actions {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+        }
+
+
+        .nav-btn {
+
+            width: 42px;
+
+            height: 42px;
+
+            border: none;
+
+            border-radius: 12px;
+
+            background: #edf1e9;
+
+            color: #52665a;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 17px;
+
+            transition: 0.3s;
+        }
+
+
+        .nav-btn:hover {
+
+            background: #dce6dc;
+
+            transform: translateY(-2px);
+        }
+
+
+        .back-home {
+
+            padding: 10px 15px;
+
+            border-radius: 11px;
+
+            background: #edf1e9;
+
+            color: #52665a;
+
+            font-size: 11px;
+
+            transition: 0.3s;
+        }
+
+
+        .back-home:hover {
+
+            background: #dce6dc;
+        }
+
+
+        /* =========================
+           PAGE
+        ========================== */
+
+        .page {
+
+            max-width: 1200px;
+
+            margin: 50px auto;
+
+            padding: 0 25px;
+        }
+
+
+        .page-title {
+
+            margin-bottom: 30px;
+        }
+
+
+        .page-title small {
+
+            color: #708b79;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            letter-spacing: 1px;
+        }
+
+
+        .page-title h1 {
+
+            color: #304238;
+
+            font-size: 37px;
+
+            margin-top: 8px;
+        }
+
+
+        .page-title p {
+
+            color: #849087;
+
+            font-size: 12px;
+
+            margin-top: 7px;
+        }
+
+
+        /* =========================
+           TOOLBAR
+        ========================== */
+
+        .toolbar {
+
+            background: #fffdf8;
+
+            border:
+                1px solid #e3e6df;
+
+            border-radius: 20px;
+
+            padding: 17px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 15px;
+
+            margin-bottom: 30px;
+
+            flex-wrap: wrap;
+        }
+
+
+        .categories {
+
+            display: flex;
+
+            gap: 7px;
+
+            flex-wrap: wrap;
+        }
+
+
+        .category {
+
+            border: none;
+
+            background: #f0f2ec;
+
+            color: #68766d;
+
+            padding: 9px 15px;
+
+            border-radius: 10px;
+
+            font-size: 10px;
+
+            transition: 0.3s;
+        }
+
+
+        .category:hover {
+
+            background: #e2e9e1;
+        }
+
+
+        .category.active {
+
+            background: #708b79;
+
+            color: white;
+        }
+
+
+        .tools-right {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 9px;
+        }
+
+
+        .search-box {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 7px;
+
+            background: #f4f3ed;
+
+            border-radius: 10px;
+
+            padding: 9px 12px;
+
+            width: 190px;
+        }
+
+
+        .search-box span {
+
+            color: #829087;
+
+            font-size: 13px;
+        }
+
+
+        .search-box input {
+
+            border: none;
+
+            outline: none;
+
+            background: transparent;
+
+            width: 100%;
+
+            color: #526158;
+
+            font-size: 10px;
+        }
+
+
+        .search-box input::placeholder {
+
+            color: #a1aaa4;
+        }
+
+
+        .sort {
+
+            border: 1px solid #e2e5df;
+
+            background: #fdfcf7;
+
+            color: #68766d;
+
+            border-radius: 10px;
+
+            padding: 9px 11px;
+
+            outline: none;
+
+            font-size: 10px;
+        }
+
+
+        /* =========================
+           PRODUCTS GRID
+        ========================== */
+
+        .products-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+
+        /* =========================
+           PRODUCT CARD
+        ========================== */
+
+        .product-card {
+
+            background: #fffdf8;
+
+            border:
+                1px solid #e3e6df;
+
+            border-radius: 21px;
+
+            overflow: hidden;
+
+            transition: 0.35s;
+
+            position: relative;
+        }
+
+
+        .product-card:hover {
+
+            transform: translateY(-7px);
+
+            box-shadow:
+                0 18px 40px
+                rgba(70,90,75,0.10);
+        }
+
+
+        .product-image {
+
+            height: 285px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #e6ece4,
+                    #f1eee6
+                );
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+
+        .product-image::after {
+
+            content: "VIORA";
+
+            position: absolute;
+
+            font-size: 35px;
+
+            font-weight: 800;
+
+            letter-spacing: 5px;
+
+            color:
+                rgba(112,139,121,0.10);
+
+            transform: rotate(-15deg);
+        }
+
+
+        .product-letter {
+
+            position: relative;
+
+            z-index: 2;
+
+            width: 80px;
+
+            height: 80px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(255,255,255,0.48);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: #708b79;
+
+            font-size: 25px;
+
+            font-weight: 800;
+
+            box-shadow:
+                0 10px 30px
+                rgba(70,90,75,0.07);
+        }
+
+
+        .badge {
+
+            position: absolute;
+
+            top: 12px;
+
+            right: 12px;
+
+            z-index: 5;
+
+            background: #708b79;
+
+            color: white;
+
+            padding: 5px 9px;
+
+            border-radius: 8px;
+
+            font-size: 8px;
+        }
+
+
+        .favorite {
+
+            position: absolute;
+
+            top: 10px;
+
+            left: 10px;
+
+            z-index: 5;
+
+            width: 35px;
+
+            height: 35px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background:
+                rgba(255,255,255,0.88);
+
+            color: #8b968f;
+
+            font-size: 17px;
+
+            transition: 0.25s;
+        }
+
+
+        .favorite:hover {
+
+            transform: scale(1.1);
+        }
+
+
+        .favorite.liked {
+
+            color: #9a7070;
+        }
+
+
+        .product-info {
+
+            padding: 18px;
+        }
+
+
+        .product-category {
+
+            color: #9aa39d;
+
+            font-size: 8px;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 6px;
+        }
+
+
+        .product-name {
+
+            color: #405247;
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            margin-bottom: 9px;
+        }
+
+
+        .product-bottom {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 8px;
+        }
+
+
+        .price {
+
+            color: #708b79;
+
+            font-size: 12px;
+
+            font-weight: 700;
+        }
+
+
+        .add-cart {
+
+            border: none;
+
+            background: #edf1e9;
+
+            color: #52665a;
+
+            width: 34px;
+
+            height: 34px;
+
+            border-radius: 10px;
+
+            font-size: 17px;
+
+            transition: 0.25s;
+        }
+
+
+        .add-cart:hover {
+
+            background: #708b79;
+
+            color: white;
+
+            transform: scale(1.05);
+        }
+
+
+        /* =========================
+           NO RESULTS
+        ========================== */
+
+        .no-results {
+
+            display: none;
+
+            text-align: center;
+
+            padding: 70px 20px;
+
+            background: #fffdf8;
+
+            border-radius: 22px;
+
+            border:
+                1px solid #e3e6df;
+        }
+
+
+        .no-results div {
+
+            font-size: 38px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .no-results h3 {
+
+            color: #526158;
+
+            font-size: 17px;
+
+            margin-bottom: 7px;
+        }
+
+
+        .no-results p {
+
+            color: #8a948d;
+
+            font-size: 11px;
+        }
+
+
+        /* =========================
+           TOAST
+        ========================== */
+
+        .toast {
+
+            position: fixed;
+
+            bottom: 25px;
+
+            left: 50%;
+
+            transform:
+                translate(-50%, 100px);
+
+            background: #35483d;
+
+            color: white;
+
+            padding: 13px 20px;
+
+            border-radius: 12px;
+
+            font-size: 11px;
+
+            opacity: 0;
+
+            pointer-events: none;
+
+            transition: 0.35s;
+
+            z-index: 5000;
+        }
+
+
+        .toast.show {
+
+            opacity: 1;
+
+            transform:
+                translate(-50%, 0);
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+
+            margin-top: 100px;
+
+            background: #35483d;
+
+            color: white;
+
+            padding: 45px 25px 22px;
+        }
+
+
+        .footer-inner {
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 30px;
+        }
+
+
+        .footer-logo {
+
+            font-size: 25px;
+
+            font-weight: 800;
+
+            letter-spacing: 4px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .footer-text {
+
+            color: #c6d0c8;
+
+            font-size: 10px;
+
+            line-height: 2;
+        }
+
+
+        .footer-links {
+
+            display: flex;
+
+            gap: 22px;
+
+            align-items: center;
+        }
+
+
+        .footer-links a {
+
+            color: #c6d0c8;
+
+            font-size: 10px;
+        }
+
+
+        .copyright {
+
+            max-width: 1200px;
+
+            margin: 30px auto 0;
+
+            padding-top: 16px;
+
+            border-top:
+                1px solid
+                rgba(255,255,255,0.12);
+
+            text-align: center;
+
+            color: #aeb9b1;
+
+            font-size: 9px;
+        }
+
+
+        /* =========================
+           TABLET
+        ========================== */
+
+        @media (max-width: 1000px) {
+
+            .products-grid {
+
+                grid-template-columns:
+                    repeat(3, 1fr);
+            }
+
+
+            .product-image {
+
+                height: 260px;
+            }
+
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================== */
+
+        @media (max-width: 700px) {
+
+            header {
+
+                height: 65px;
+            }
+
+
+            .navbar {
+
+                padding: 0 15px;
+            }
+
+
+            .logo {
+
+                font-size: 23px;
+            }
+
+
+            .back-home {
+
+                display: none;
+            }
+
+
+            .nav-btn {
+
+                width: 38px;
+
+                height: 38px;
+            }
+
+
+            .page {
+
+                margin: 35px auto;
+
+                padding: 0 15px;
+            }
+
+
+            .page-title h1 {
+
+                font-size: 30px;
+            }
+
+
+            .toolbar {
+
+                align-items: stretch;
+
+                flex-direction: column;
+            }
+
+
+            .tools-right {
+
+                width: 100%;
+            }
+
+
+            .search-box {
+
+                flex: 1;
+
+                width: auto;
+            }
+
+
+            .sort {
+
+                width: 130px;
+            }
+
+
+            .products-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+                gap: 12px;
+            }
+
+
+            .product-image {
+
+                height: 220px;
+            }
+
+
+            .product-info {
+
+                padding: 13px;
+            }
+
+
+            .product-name {
+
+                font-size: 11px;
+            }
+
+
+            .price {
+
+                font-size: 10px;
+            }
+
+
+            .footer-inner {
+
+                flex-direction: column;
+            }
+
+
+            .footer-links {
+
+                flex-wrap: wrap;
+            }
+
+        }
+
+
+        /* =========================
+           SMALL MOBILE
+        ========================== */
+
+        @media (max-width: 400px) {
+
+            .products-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .product-image {
+
+                height: 300px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================== -->
+
+<header>
+
+    <nav class="navbar">
+
+
+        <a
+            href="viorahome.html"
+            class="logo">
+
+            VIORA
+
+        </a>
+
+
+        <div class="nav-actions">
+
+
+            <a
+                href="account.html"
+                class="nav-btn"
+                title="حساب کاربری">
+
+                👤
+
+            </a>
+
+
+            <a
+                href="cart.html"
+                class="nav-btn"
+                title="سبد خرید">
+
+                🛍️
+
+            </a>
+
+
+            <a
+                href="viorahome.html"
+                class="back-home">
+
+                ← خانه
+
+            </a>
+
+
+        </div>
+
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================
+     MAIN
+========================== -->
+
+<main class="page">
+
+
+    <div class="page-title">
+
+
+        <small>
+            VIORA COLLECTION
+        </small>
+
+
+        <h1>
+            محصولات
+        </h1>
+
+
+        <p>
+            استایل مورد علاقه‌ات را پیدا کن.
+        </p>
+
+
+    </div>
+
+
+
+    <!-- =========================
+         TOOLBAR
+    ========================== -->
+
+    <section class="toolbar">
+
+
+        <div class="categories">
+
+
+            <button
+                class="category active"
+                data-category="all">
+
+                همه
+
+            </button>
+
+
+            <button
+                class="category"
+                data-category="women">
+
+                زنانه
+
+            </button>
+
+
+            <button
+                class="category"
+                data-category="men">
+
+                مردانه
+
+            </button>
+
+
+            <button
+                class="category"
+                data-category="unisex">
+
+                یونیسکس
+
+            </button>
+
+
+        </div>
+
+
+
+        <div class="tools-right">
+
+
+            <div class="search-box">
+
+
+                <span>
+                    🔍
+                </span>
+
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="جستجوی محصول...">
+
+
+            </div>
+
+
+            <select
+                class="sort"
+                id="sortSelect">
+
+
+                <option value="default">
+                    مرتب‌سازی
+                </option>
+
+
+                <option value="cheap">
+                    ارزان‌ترین
+                </option>
+
+
+                <option value="expensive">
+                    گران‌ترین
+                </option>
+
+
+                <option value="name">
+                    نام محصول
+                </option>
+
+
+            </select>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         PRODUCTS
+    ========================== -->
+
+    <section
+        class="products-grid"
+        id="productsGrid">
+
+
+
+        <!-- PRODUCT 1 -->
+
+        <article
+            class="product-card"
+            data-category="women"
+            data-name="پیراهن لینن ویورا"
+            data-price="1450000">
+
+
+            <div class="product-image">
+
+
+                <span class="badge">
+                    جدید
+                </span>
+
+
+                <button
+                    class="favorite">
+
+                    ♡
+
+                </button>
+
+
+                <div class="product-letter">
+                    V
+                </div>
+
+
+            </div>
+
+
+            <div class="product-info">
+
+
+                <div class="product-category">
+                    WOMEN
+                </div>
+
+
+                <h3 class="product-name">
+                    پیراهن لینن ویورا
+                </h3>
+
+
+                <div class="product-bottom">
+
+
+                    <span class="price">
+                        ۱,۴۵۰,۰۰۰ تومان
+                    </span>
+
+
+                    <button
+                        class="add-cart"
+                        data-product="پیراهن لینن ویورا">
+
+                        +
+
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
+        </article>
+
+
+
+        <!-- PRODUCT 2 -->
+
+        <article
+            class="product-card"
+            data-category="men"
+            data-name="پیراهن کتان کلاسیک"
+            data-price="1290000">
+
+
+            <div class="product-image">
+
+
+                <button
+                    class="favorite">
+
+                    ♡
+
+                </button>
+
+
+                <div class="product-letter">
+                    V
+                </div>
+
+
+            </div>
+
+
+            <div class="product-info">
+
+
+                <div class="product-category">
+                    MEN
+                </div>
+
+
+                <h3 class="product-name">
+                    پیراهن کتان کلاسیک
+                </h3>
+
+
+                <div class="product-bottom">
+
+
+                    <span class="price">
+                        ۱,۲۹۰,۰۰۰ تومان
+                    </span>
+
+
+                    <button
+                        class="add-cart"
+                        data-product="پیراهن کتان کلاسیک">
+
+                        +
+
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
+        </article>
+
+
+
+        <!-- PRODUCT 3 -->
+
+        <article
+            class="product-card"
+            data-category="unisex"
+            data-name="هودی ساده ویورا"
+            data-price="1790000">
+
+
+            <div class="product-image">
+
+
+                <span class="badge">
+                    محبوب
+                </span>
+
+
+                <button
+                    class="favorite">
+
+                    ♡
+
+                </button>
+
+
+                <div class="product-letter">
+                    V
+                </div>
+
+
+            </div>
+
+
+            <div class="product-info">
+
+
+                <div class="product-category">
+                    UNISEX
+                </div>
+
+
+                <h3 class="product-name">
+                    هودی ساده ویورا
+                </h3>
+
+
+                <div class="product-bottom">
+
+
+                    <span class="price">
+                        ۱,۷۹۰,۰۰۰ تومان
+                    </span>
+
+
+                    <button
+                        class="add-cart"
+                        data-product="هودی ساده ویورا">
+
+                        +
+
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
+        </article>
+
+
+
+        <!-- PRODUCT 4 -->
+
+        <article
+            class="product-card"
+            data-category="women"
+            data-name="شومیز مینیمال"
+            data-price="1190000">
+
+
+            <div class="product-image">
+
+
+                <button
+                    class="favorite">
+
+                    ♡
+
+                </button>
+
+
+                <div class="product-letter">
+                    V
+                </div>
+
+
+            </div>
+
+
+            <div class="product-info">
+
+
+                <div class="product-category">
+                    WOMEN
+                </div>
+
+
+                <h3 class="product-name">
+                    شومیز مینیمال
+                </h3>
+
+
+                <div class="product-bottom">
+
+
+                    <span class="price">
+                        ۱,۱۹۰,۰۰۰ تومان
+                    </span>
+
+
+                    <button
+                        class="add-cart"
+                        data-product="شومیز مینیمال">
+
+                        +
+
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
+        </article>
+
+
+
+        <!-- PRODUCT 5 -->
+
+        <article
+            class="product-card"
+            data-category="men"
+            data-name="شلوار کتان راحتی"
+            data-price="1390000">
+
+
+            <div class="product-image">
+
+
+                <span class="badge">
+                    جدید
+                </span>
+
+
+                <button
+                    class="favorite">
+
+                    ♡
+
+                </button>
+
+
+                <div class="product-letter">
+                    V
+                </div>
+
+
+            </div>
+
+
+            <div class="product-info">
+
+
+                <div class="product-category">
+                    MEN
+                </div>
+
+
+                <h3 class="product-name">
+                    شلوار کتان راحتی
+                </h3>
+
+
+                <div class="product-bottom">
+
+
+                    <span class="price">
+                        ۱,۳۹۰,۰۰۰ تومان
+                    </span>
+
+
+                    <button
+                        class="add-cart"
+                        data-product="شلوار کتان راحتی">
+
+                        +
+
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
+        </article>
+
+
+
+        <!-- PRODUCT 6 -->
+
+        <article
+            class="product-card"
+            data-category="women"
+            data-name="کت کوتاه ویورا"
+            data-price="2190000">
+
+
+            <div class="product-image">
+
+
+                <button
+                    class="favorite">
+
+                    ♡
+
+                </button>
+
+
+                <div class="product-letter">
+                    V
+                </div>
+
+
+            </div>
+
+
+            <div class="product-info">
+
+
+                <div class="product-category">
+                    WOMEN
+                </div>
+
+
+                <h3 class="product-name">
+                    کت کوتاه ویورا
+                </h3>
+
+
+                <div class="product-bottom">
+
+
+                    <span class="price">
+                        ۲,۱۹۰,۰۰۰ تومان
+                    </span>
+
+
+                    <button
+                        class="add-cart"
+                        data-product="کت کوتاه ویورا">
+
+                        +
+
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
+        </article>
+
+
+
+        <!-- PRODUCT 7 -->
+
+        <article
+            class="product-card"
+            data-category="unisex"
+            data-name="تیشرت کلاسیک V"
+            data-price="790000">
+
+
+            <div class="product-image">
+
+
+                <span class="badge">
+                    محبوب
+                </span>
+
+
+                <button
+                    class="favorite">
+
+                    ♡
+
+                </button>
+
+
+                <div class="product-letter">
+                    V
+                </div>
+
+
+            </div>
+
+
+            <div class="product-info">
+
+
+                <div class="product-category">
+                    UNISEX
+                </div>
+
+
+                <h3 class="product-name">
+                    تیشرت کلاسیک V
+                </h3>
+
+
+                <div class="product-bottom">
+
+
+                    <span class="price">
+                        ۷۹۰,۰۰۰ تومان
+                    </span>
+
+
+                    <button
+                        class="add-cart"
+                        data-product="تیشرت کلاسیک V">
+
+                        +
+
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
+        </article>
+
+
+
+        <!-- PRODUCT 8 -->
+
+        <article
+            class="product-card"
+            data-category="men"
+            data-name="سویشرت مینیمال"
+            data-price="1590000">
+
+
+            <div class="product-image">
+
+
+                <button
+                    class="favorite">
+
+                    ♡
+
+                </button>
+
+
+                <div class="product-letter">
+                    V
+                </div>
+
+
+            </div>
+
+
+            <div class="product-info">
+
+
+                <div class="product-category">
+                    MEN
+                </div>
+
+
+                <h3 class="product-name">
+                    سویشرت مینیمال
+                </h3>
+
+
+                <div class="product-bottom">
+
+
+                    <span class="price">
+                        ۱,۵۹۰,۰۰۰ تومان
+                    </span>
+
+
+                    <button
+                        class="add-cart"
+                        data-product="سویشرت مینیمال">
+
+                        +
+
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
+        </article>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         NO RESULTS
+    ========================== -->
+
+    <div
+        class="no-results"
+        id="noResults">
+
+
+        <div>
+            🔍
+        </div>
+
+
+        <h3>
+            محصولی پیدا نشد
+        </h3>
+
+
+        <p>
+            عبارت جستجو یا دسته‌بندی دیگری را امتحان کن.
+        </p>
+
+
+    </div>
+
+
+</main>
+
+
+
+<!-- =========================
+     TOAST
+========================== -->
+
+<div
+    class="toast"
+    id="toast">
+
+    محصول به سبد خرید اضافه شد 🛍️
+
+</div>
+
+
+
+<!-- =========================
+     FOOTER
+========================== -->
+
+<footer>
+
+
+    <div class="footer-inner">
+
+
+        <div>
+
+
+            <div class="footer-logo">
+                VIORA
+            </div>
+
+
+            <p class="footer-text">
+
+                استایل تو،
+                انتخاب تو.
+
+            </p>
+
+
+        </div>
+
+
+        <div class="footer-links">
+
+
+            <a href="viorahome.html">
+                خانه
+            </a>
+
+
+            <a href="about.html">
+                درباره ما
+            </a>
+
+
+            <a href="account.html">
+                حساب کاربری
+            </a>
+
+
+            <a href="cart.html">
+                سبد خرید
+            </a>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="copyright">
+
+        © 2026 Viora — تمامی حقوق محفوظ است.
+
+    </div>
+
+
+</footer>
+
+
+
+<script>
+
+
+// ======================================
+// ELEMENTS
+// ======================================
+
+const productsGrid =
+    document.getElementById("productsGrid");
+
+
+const products =
+    Array.from(
+        document.querySelectorAll(
+            ".product-card"
+        )
+    );
+
+
+const categories =
+    document.querySelectorAll(
+        ".category"
+    );
+
+
+const searchInput =
+    document.getElementById(
+        "searchInput"
+    );
+
+
+const sortSelect =
+    document.getElementById(
+        "sortSelect"
+    );
+
+
+const noResults =
+    document.getElementById(
+        "noResults"
+    );
+
+
+const toast =
+    document.getElementById(
+        "toast"
+    );
+
+
+
+let currentCategory = "all";
+
+
+
+// ======================================
+// FILTER PRODUCTS
+// ======================================
+
+function filterProducts() {
+
+
+    const search =
+        searchInput.value
+            .trim()
+            .toLowerCase();
+
+
+    let visibleProducts = [];
+
+
+    products.forEach(product => {
+
+
+        const category =
+            product.dataset.category;
+
+
+        const name =
+            product.dataset.name
+                .toLowerCase();
+
+
+        const categoryMatch =
+            currentCategory === "all" ||
+            category === currentCategory;
+
+
+        const searchMatch =
+            name.includes(search);
+
+
+        if (
+            categoryMatch &&
+            searchMatch
+        ) {
+
+            product.style.display =
+                "block";
+
+            visibleProducts.push(product);
+
+        } else {
+
+            product.style.display =
+                "none";
+
+        }
+
+    });
+
+
+    noResults.style.display =
+        visibleProducts.length === 0
+            ? "block"
+            : "none";
+
+}
+
+
+
+// ======================================
+// CATEGORY BUTTONS
+// ======================================
+
+categories.forEach(button => {
+
+
+    button.addEventListener(
+        "click",
+        () => {
+
+
+            categories.forEach(
+                item =>
+                    item.classList.remove(
+                        "active"
+                    )
+            );
+
+
+            button.classList.add(
+                "active"
+            );
+
+
+            currentCategory =
+                button.dataset.category;
+
+
+            filterProducts();
+
+        }
+    );
+
+});
+
+
+
+// ======================================
+// SEARCH
+// ======================================
+
+searchInput.addEventListener(
+    "input",
+    filterProducts
+);
+
+
+
+// ======================================
+// SORT
+// ======================================
+
+sortSelect.addEventListener(
+    "change",
+    () => {
+
+
+        const value =
+            sortSelect.value;
+
+
+        let sorted =
+            [...products];
+
+
+        if (value === "cheap") {
+
+            sorted.sort(
+                (a,b) =>
+                    Number(a.dataset.price) -
+                    Number(b.dataset.price)
+            );
+
+        }
+
+
+        else if (value === "expensive") {
+
+            sorted.sort(
+                (a,b) =>
+                    Number(b.dataset.price) -
+                    Number(a.dataset.price)
+            );
+
+        }
+
+
+        else if (value === "name") {
+
+            sorted.sort(
+                (a,b) =>
+                    a.dataset.name.localeCompare(
+                        b.dataset.name,
+                        "fa"
+                    )
+            );
+
+        }
+
+
+        sorted.forEach(
+            product =>
+                productsGrid.appendChild(
+                    product
+                )
+        );
+
+
+        filterProducts();
+
+    }
+);
+
+
+
+// ======================================
+// FAVORITES
+// ======================================
+
+document
+    .querySelectorAll(".favorite")
+    .forEach(button => {
+
+
+        button.addEventListener(
+            "click",
+            () => {
+
+
+                button.classList.toggle(
+                    "liked"
+                );
+
+
+                if (
+                    button.classList.contains(
+                        "liked"
+                    )
+                ) {
+
+                    button.textContent =
+                        "♥";
+
+                    showToast(
+                        "به علاقه‌مندی‌ها اضافه شد ❤️"
+                    );
+
+                } else {
+
+                    button.textContent =
+                        "♡";
+
+                }
+
+            }
+        );
+
+    });
+
+
+
+// ======================================
+// ADD TO CART
+// ======================================
+
+document
+    .querySelectorAll(".add-cart")
+    .forEach(button => {
+
+
+        button.addEventListener(
+            "click",
+            () => {
+
+
+                const product =
+                    button.dataset.product;
+
+
+                showToast(
+                    `${product} به سبد خرید اضافه شد 🛍️`
+                );
+
+
+                button.textContent =
+                    "✓";
+
+
+                setTimeout(
+                    () => {
+
+                        button.textContent =
+                            "+";
+
+                    },
+                    1200
+                );
+
+            }
+        );
+
+    });
+
+
+
+// ======================================
+// TOAST
+// ======================================
+
+let toastTimer;
+
+
+function showToast(message) {
+
+
+    toast.textContent =
+        message;
+
+
+    toast.classList.add(
+        "show"
+    );
+
+
+    clearTimeout(
+        toastTimer
+    );
+
+
+    toastTimer =
+        setTimeout(
+            () => {
+
+                toast.classList.remove(
+                    "show"
+                );
+
+            },
+            2200
+        );
+
+}
+
+
+
+// ======================================
+// INITIAL FILTER
+// ======================================
+
+filterProducts();
+
+
+</script>
+
+
+</body>
+
+</html>
+```

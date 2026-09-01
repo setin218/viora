@@ -1,0 +1,1540 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>سبد خرید | Viora</title>
+
+
+    <!-- =========================
+         FONT
+    ========================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+
+        /* =========================
+           RESET
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            font-family: "Vazirmatn", sans-serif;
+
+            background: #f7f3e9;
+
+            color: #35483d;
+
+            min-height: 100vh;
+
+            overflow-x: hidden;
+        }
+
+
+        button,
+        input {
+
+            font-family: inherit;
+        }
+
+
+        button {
+
+            cursor: pointer;
+        }
+
+
+        a {
+
+            text-decoration: none;
+
+            color: inherit;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================== */
+
+        header {
+
+            height: 75px;
+
+            background: rgba(255,253,247,0.96);
+
+            backdrop-filter: blur(12px);
+
+            border-bottom:
+                1px solid #e3e5de;
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+        }
+
+
+        .navbar {
+
+            max-width: 1200px;
+
+            height: 100%;
+
+            margin: auto;
+
+            padding: 0 25px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+        }
+
+
+        .logo {
+
+            font-size: 27px;
+
+            font-weight: 800;
+
+            letter-spacing: 4px;
+
+            color: #708b79;
+        }
+
+
+        .back-home {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            background: #edf1e9;
+
+            color: #52665a;
+
+            border: none;
+
+            padding: 11px 17px;
+
+            border-radius: 11px;
+
+            font-size: 12px;
+
+            transition: 0.3s;
+        }
+
+
+        .back-home:hover {
+
+            background: #dce6dc;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           PAGE
+        ========================== */
+
+        .page {
+
+            max-width: 1200px;
+
+            margin: 55px auto;
+
+            padding: 0 25px;
+        }
+
+
+        .page-title {
+
+            margin-bottom: 30px;
+        }
+
+
+        .page-title small {
+
+            color: #708b79;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            letter-spacing: 1px;
+        }
+
+
+        .page-title h1 {
+
+            font-size: 35px;
+
+            color: #304238;
+
+            margin-top: 8px;
+        }
+
+
+        .page-title p {
+
+            color: #7e8982;
+
+            font-size: 13px;
+
+            margin-top: 8px;
+        }
+
+
+        /* =========================
+           LAYOUT
+        ========================== */
+
+        .cart-layout {
+
+            display: grid;
+
+            grid-template-columns: 1fr 340px;
+
+            gap: 25px;
+
+            align-items: start;
+        }
+
+
+        /* =========================
+           PRODUCTS
+        ========================== */
+
+        .cart-products {
+
+            background: #fffdf8;
+
+            border:
+                1px solid #e3e6df;
+
+            border-radius: 23px;
+
+            padding: 25px;
+        }
+
+
+        .cart-header {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            padding-bottom: 18px;
+
+            border-bottom:
+                1px solid #edf0ea;
+
+            margin-bottom: 15px;
+        }
+
+
+        .cart-header h2 {
+
+            color: #35483d;
+
+            font-size: 20px;
+        }
+
+
+        .cart-count {
+
+            color: #8a948d;
+
+            font-size: 11px;
+        }
+
+
+        /* =========================
+           CART ITEM
+        ========================== */
+
+        .cart-item {
+
+            display: grid;
+
+            grid-template-columns: 100px 1fr auto;
+
+            align-items: center;
+
+            gap: 18px;
+
+            padding: 18px 0;
+
+            border-bottom:
+                1px solid #edf0ea;
+        }
+
+
+        .cart-item:last-child {
+
+            border-bottom: none;
+        }
+
+
+        .item-image {
+
+            width: 100px;
+
+            height: 110px;
+
+            border-radius: 15px;
+
+            background: #e7ede5;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: rgba(112,139,121,0.35);
+
+            font-size: 18px;
+
+            font-weight: 800;
+
+            letter-spacing: 2px;
+        }
+
+
+        .item-category {
+
+            color: #8b968f;
+
+            font-size: 9px;
+
+            margin-bottom: 5px;
+        }
+
+
+        .item-name {
+
+            color: #405247;
+
+            font-size: 14px;
+
+            margin-bottom: 8px;
+        }
+
+
+        .item-price {
+
+            color: #708b79;
+
+            font-size: 12px;
+
+            font-weight: 700;
+        }
+
+
+        /* =========================
+           QUANTITY
+        ========================== */
+
+        .quantity {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 9px;
+
+            margin-top: 12px;
+        }
+
+
+        .quantity button {
+
+            width: 27px;
+
+            height: 27px;
+
+            border: 1px solid #dce3da;
+
+            background: #f5f3eb;
+
+            color: #52665a;
+
+            border-radius: 8px;
+
+            font-size: 14px;
+        }
+
+
+        .quantity span {
+
+            min-width: 20px;
+
+            text-align: center;
+
+            font-size: 12px;
+
+            color: #536158;
+        }
+
+
+        /* =========================
+           ITEM TOTAL
+        ========================== */
+
+        .item-actions {
+
+            text-align: left;
+
+            height: 100%;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: space-between;
+
+            align-items: flex-end;
+        }
+
+
+        .item-total {
+
+            color: #405247;
+
+            font-size: 13px;
+
+            font-weight: 700;
+        }
+
+
+        .remove {
+
+            border: none;
+
+            background: transparent;
+
+            color: #a07b7b;
+
+            font-size: 10px;
+
+            padding: 5px 0;
+
+        }
+
+
+        .remove:hover {
+
+            color: #8d5d5d;
+        }
+
+
+        /* =========================
+           SUMMARY
+        ========================== */
+
+        .summary {
+
+            background: #fffdf8;
+
+            border:
+                1px solid #e3e6df;
+
+            border-radius: 23px;
+
+            padding: 25px;
+
+            position: sticky;
+
+            top: 100px;
+        }
+
+
+        .summary h2 {
+
+            color: #35483d;
+
+            font-size: 20px;
+
+            margin-bottom: 22px;
+        }
+
+
+        .summary-row {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding: 10px 0;
+
+            color: #78847c;
+
+            font-size: 11px;
+        }
+
+
+        .summary-row strong {
+
+            color: #526158;
+
+            font-size: 12px;
+        }
+
+
+        .summary-divider {
+
+            height: 1px;
+
+            background: #e8ebe5;
+
+            margin: 12px 0;
+        }
+
+
+        .total-row {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            margin-top: 10px;
+
+            padding-top: 15px;
+        }
+
+
+        .total-row span {
+
+            color: #35483d;
+
+            font-size: 13px;
+
+            font-weight: 600;
+        }
+
+
+        .total-row strong {
+
+            color: #708b79;
+
+            font-size: 19px;
+        }
+
+
+        .checkout {
+
+            width: 100%;
+
+            border: none;
+
+            background: #708b79;
+
+            color: white;
+
+            padding: 15px;
+
+            border-radius: 12px;
+
+            font-size: 12px;
+
+            margin-top: 22px;
+
+            transition: 0.3s;
+        }
+
+
+        .checkout:hover {
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 10px 25px
+                rgba(75,100,82,0.18);
+        }
+
+
+        .continue {
+
+            display: block;
+
+            text-align: center;
+
+            color: #708b79;
+
+            font-size: 11px;
+
+            margin-top: 15px;
+        }
+
+
+        /* =========================
+           EMPTY CART
+        ========================== */
+
+        .empty-cart {
+
+            text-align: center;
+
+            padding: 65px 20px;
+
+            display: none;
+        }
+
+
+        .empty-icon {
+
+            font-size: 48px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .empty-cart h3 {
+
+            color: #526158;
+
+            font-size: 18px;
+
+            margin-bottom: 7px;
+        }
+
+
+        .empty-cart p {
+
+            color: #8a948d;
+
+            font-size: 11px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .shop-btn {
+
+            display: inline-block;
+
+            background: #708b79;
+
+            color: white;
+
+            padding: 12px 23px;
+
+            border-radius: 11px;
+
+            font-size: 11px;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media (max-width: 850px) {
+
+            .cart-layout {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .summary {
+
+                position: static;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            header {
+
+                height: 65px;
+            }
+
+
+            .navbar {
+
+                padding: 0 15px;
+            }
+
+
+            .logo {
+
+                font-size: 23px;
+            }
+
+
+            .back-home {
+
+                padding: 9px 12px;
+
+                font-size: 10px;
+            }
+
+
+            .page {
+
+                margin: 35px auto;
+
+                padding: 0 15px;
+            }
+
+
+            .page-title h1 {
+
+                font-size: 29px;
+            }
+
+
+            .cart-products {
+
+                padding: 18px;
+            }
+
+
+            .cart-item {
+
+                grid-template-columns:
+                    75px 1fr;
+
+                gap: 12px;
+            }
+
+
+            .item-image {
+
+                width: 75px;
+
+                height: 90px;
+            }
+
+
+            .item-actions {
+
+                grid-column: 2;
+
+                flex-direction: row;
+
+                align-items: center;
+
+                justify-content: space-between;
+
+                margin-top: -15px;
+            }
+
+
+            .item-total {
+
+                font-size: 12px;
+            }
+
+
+            .summary {
+
+                padding: 20px;
+            }
+
+        }
+
+
+        @media (max-width: 400px) {
+
+            .cart-header h2 {
+
+                font-size: 17px;
+            }
+
+
+            .item-name {
+
+                font-size: 12px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================== -->
+
+<header>
+
+    <nav class="navbar">
+
+
+        <a
+            href="viorahome.html"
+            class="logo">
+
+            VIORA
+
+        </a>
+
+
+        <a
+            href="viorahome.html"
+            class="back-home">
+
+            ← ادامه خرید
+
+        </a>
+
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================
+     MAIN
+========================== -->
+
+<main class="page">
+
+
+    <div class="page-title">
+
+        <small>
+            VIORA SHOPPING BAG
+        </small>
+
+        <h1>
+            سبد خرید
+        </h1>
+
+        <p>
+            انتخاب‌های تو اینجا منتظر تو هستند.
+        </p>
+
+    </div>
+
+
+
+    <div class="cart-layout">
+
+
+        <!-- =========================
+             CART PRODUCTS
+        ========================== -->
+
+        <section class="cart-products">
+
+
+            <div class="cart-header">
+
+                <h2>
+                    محصولات انتخاب‌شده
+                </h2>
+
+                <span
+                    class="cart-count"
+                    id="cartCount">
+
+                    ۳ محصول
+
+                </span>
+
+            </div>
+
+
+
+            <div id="cartItems">
+
+
+                <!-- PRODUCT 1 -->
+
+                <article
+                    class="cart-item"
+                    data-price="1450000">
+
+
+                    <div class="item-image">
+                        V
+                    </div>
+
+
+                    <div>
+
+
+                        <div class="item-category">
+                            WOMEN
+                        </div>
+
+
+                        <h3 class="item-name">
+                            پیراهن لینن ویورا
+                        </h3>
+
+
+                        <div class="item-price">
+                            ۱,۴۵۰,۰۰۰ تومان
+                        </div>
+
+
+                        <div class="quantity">
+
+
+                            <button
+                                class="minus">
+
+                                −
+
+                            </button>
+
+
+                            <span class="quantity-number">
+                                1
+                            </span>
+
+
+                            <button
+                                class="plus">
+
+                                +
+
+                            </button>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="item-actions">
+
+
+                        <strong class="item-total">
+                            ۱,۴۵۰,۰۰۰
+                        </strong>
+
+
+                        <button class="remove">
+                            حذف
+                        </button>
+
+
+                    </div>
+
+
+                </article>
+
+
+
+                <!-- PRODUCT 2 -->
+
+                <article
+                    class="cart-item"
+                    data-price="1290000">
+
+
+                    <div class="item-image">
+                        V
+                    </div>
+
+
+                    <div>
+
+
+                        <div class="item-category">
+                            MEN
+                        </div>
+
+
+                        <h3 class="item-name">
+                            پیراهن کتان کلاسیک
+                        </h3>
+
+
+                        <div class="item-price">
+                            ۱,۲۹۰,۰۰۰ تومان
+                        </div>
+
+
+                        <div class="quantity">
+
+
+                            <button class="minus">
+                                −
+                            </button>
+
+
+                            <span class="quantity-number">
+                                1
+                            </span>
+
+
+                            <button class="plus">
+                                +
+                            </button>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="item-actions">
+
+
+                        <strong class="item-total">
+                            ۱,۲۹۰,۰۰۰
+                        </strong>
+
+
+                        <button class="remove">
+                            حذف
+                        </button>
+
+
+                    </div>
+
+
+                </article>
+
+
+
+                <!-- PRODUCT 3 -->
+
+                <article
+                    class="cart-item"
+                    data-price="1790000">
+
+
+                    <div class="item-image">
+                        V
+                    </div>
+
+
+                    <div>
+
+
+                        <div class="item-category">
+                            UNISEX
+                        </div>
+
+
+                        <h3 class="item-name">
+                            هودی ساده ویورا
+                        </h3>
+
+
+                        <div class="item-price">
+                            ۱,۷۹۰,۰۰۰ تومان
+                        </div>
+
+
+                        <div class="quantity">
+
+
+                            <button class="minus">
+                                −
+                            </button>
+
+
+                            <span class="quantity-number">
+                                1
+                            </span>
+
+
+                            <button class="plus">
+                                +
+                            </button>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="item-actions">
+
+
+                        <strong class="item-total">
+                            ۱,۷۹۰,۰۰۰
+                        </strong>
+
+
+                        <button class="remove">
+                            حذف
+                        </button>
+
+
+                    </div>
+
+
+                </article>
+
+
+            </div>
+
+
+
+            <!-- EMPTY -->
+
+            <div
+                class="empty-cart"
+                id="emptyCart">
+
+
+                <div class="empty-icon">
+                    🛍️
+                </div>
+
+
+                <h3>
+                    سبد خریدت خالیه
+                </h3>
+
+
+                <p>
+                    هنوز محصولی به سبد خرید اضافه نکردی.
+                </p>
+
+
+                <a
+                    href="viorahome.html"
+                    class="shop-btn">
+
+                    شروع خرید
+
+                </a>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             SUMMARY
+        ========================== -->
+
+        <aside class="summary">
+
+
+            <h2>
+                خلاصه سفارش
+            </h2>
+
+
+            <div class="summary-row">
+
+                <span>
+                    مجموع محصولات
+                </span>
+
+                <strong id="subtotal">
+                    ۴,۵۳۰,۰۰۰ تومان
+                </strong>
+
+            </div>
+
+
+            <div class="summary-row">
+
+                <span>
+                    هزینه ارسال
+                </span>
+
+                <strong id="shipping">
+                    رایگان
+                </strong>
+
+            </div>
+
+
+            <div class="summary-divider"></div>
+
+
+            <div class="total-row">
+
+                <span>
+                    مبلغ نهایی
+                </span>
+
+                <strong id="total">
+                    ۴,۵۳۰,۰۰۰ تومان
+                </strong>
+
+            </div>
+
+
+            <button
+                class="checkout"
+                id="checkout">
+
+                ادامه و ثبت سفارش
+
+            </button>
+
+
+            <a
+                href="viorahome.html"
+                class="continue">
+
+                ← ادامه خرید
+
+            </a>
+
+
+        </aside>
+
+
+    </div>
+
+</main>
+
+
+
+<script>
+
+
+// ======================================
+// CART ELEMENTS
+// ======================================
+
+const cartItems =
+    document.querySelectorAll(".cart-item");
+
+
+const subtotalElement =
+    document.getElementById("subtotal");
+
+
+const totalElement =
+    document.getElementById("total");
+
+
+const cartCount =
+    document.getElementById("cartCount");
+
+
+const emptyCart =
+    document.getElementById("emptyCart");
+
+
+const cartContainer =
+    document.getElementById("cartItems");
+
+
+
+// ======================================
+// FORMAT PRICE
+// ======================================
+
+function formatPrice(number) {
+
+    return new Intl.NumberFormat("fa-IR")
+        .format(number) + " تومان";
+
+}
+
+
+
+// ======================================
+// UPDATE CART
+// ======================================
+
+function updateCart() {
+
+
+    const items =
+        document.querySelectorAll(".cart-item");
+
+
+    let subtotal = 0;
+
+    let count = 0;
+
+
+    items.forEach(item => {
+
+
+        const price =
+            Number(item.dataset.price);
+
+
+        const quantity =
+            Number(
+                item.querySelector(
+                    ".quantity-number"
+                ).textContent
+            );
+
+
+        const itemTotal =
+            price * quantity;
+
+
+        item.querySelector(
+            ".item-total"
+        ).textContent =
+            new Intl.NumberFormat("fa-IR")
+                .format(itemTotal);
+
+
+        subtotal += itemTotal;
+
+        count += quantity;
+
+    });
+
+
+    subtotalElement.textContent =
+        formatPrice(subtotal);
+
+
+    totalElement.textContent =
+        formatPrice(subtotal);
+
+
+    cartCount.textContent =
+        `${new Intl.NumberFormat("fa-IR").format(count)} محصول`;
+
+
+    if (items.length === 0) {
+
+
+        cartContainer.style.display =
+            "none";
+
+
+        emptyCart.style.display =
+            "block";
+
+
+        cartCount.textContent =
+            "۰ محصول";
+
+    } else {
+
+
+        cartContainer.style.display =
+            "block";
+
+
+        emptyCart.style.display =
+            "none";
+
+    }
+
+}
+
+
+
+// ======================================
+// PLUS BUTTON
+// ======================================
+
+document.querySelectorAll(".plus")
+    .forEach(button => {
+
+
+        button.addEventListener(
+            "click",
+            () => {
+
+
+                const number =
+                    button
+                        .parentElement
+                        .querySelector(
+                            ".quantity-number"
+                        );
+
+
+                let quantity =
+                    Number(number.textContent);
+
+
+                quantity++;
+
+
+                number.textContent =
+                    quantity;
+
+
+                updateCart();
+
+            }
+        );
+
+    });
+
+
+
+// ======================================
+// MINUS BUTTON
+// ======================================
+
+document.querySelectorAll(".minus")
+    .forEach(button => {
+
+
+        button.addEventListener(
+            "click",
+            () => {
+
+
+                const number =
+                    button
+                        .parentElement
+                        .querySelector(
+                            ".quantity-number"
+                        );
+
+
+                let quantity =
+                    Number(number.textContent);
+
+
+                if (quantity > 1) {
+
+                    quantity--;
+
+                    number.textContent =
+                        quantity;
+
+                    updateCart();
+
+                }
+
+            }
+        );
+
+    });
+
+
+
+// ======================================
+// REMOVE
+// ======================================
+
+document.querySelectorAll(".remove")
+    .forEach(button => {
+
+
+        button.addEventListener(
+            "click",
+            () => {
+
+
+                const item =
+                    button.closest(
+                        ".cart-item"
+                    );
+
+
+                item.remove();
+
+
+                updateCart();
+
+            }
+        );
+
+    });
+
+
+
+// ======================================
+// CHECKOUT
+// ======================================
+
+document
+    .getElementById("checkout")
+    .addEventListener(
+        "click",
+        () => {
+
+
+            const items =
+                document.querySelectorAll(
+                    ".cart-item"
+                );
+
+
+            if (items.length === 0) {
+
+                alert(
+                    "سبد خریدت خالیه!"
+                );
+
+                return;
+
+            }
+
+
+            alert(
+                "سیستم ثبت سفارش به‌زودی فعال می‌شود ✨"
+            );
+
+        }
+    );
+
+
+
+// ======================================
+// INITIAL UPDATE
+// ======================================
+
+updateCart();
+
+
+</script>
+
+
+</body>
+
+</html>
+```

@@ -1,0 +1,1362 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>درباره ما | Viora</title>
+
+
+    <!-- FONT -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+
+        /* =========================
+           RESET
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            font-family: "Vazirmatn", sans-serif;
+
+            background: #f7f3e9;
+
+            color: #35483d;
+
+            overflow-x: hidden;
+        }
+
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        button {
+            font-family: inherit;
+            cursor: pointer;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================== */
+
+        header {
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+            height: 75px;
+
+            background:
+                rgba(255,253,247,0.96);
+
+            backdrop-filter: blur(12px);
+
+            border-bottom:
+                1px solid #e3e5de;
+        }
+
+
+        .navbar {
+
+            max-width: 1200px;
+
+            height: 100%;
+
+            margin: auto;
+
+            padding: 0 25px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+        }
+
+
+        .logo {
+
+            font-size: 27px;
+
+            font-weight: 800;
+
+            letter-spacing: 4px;
+
+            color: #708b79;
+        }
+
+
+        .back-home {
+
+            background: #edf1e9;
+
+            color: #52665a;
+
+            padding: 11px 18px;
+
+            border-radius: 11px;
+
+            font-size: 12px;
+
+            transition: 0.3s;
+        }
+
+
+        .back-home:hover {
+
+            background: #dce6dc;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+
+            max-width: 1200px;
+
+            margin: 35px auto;
+
+            padding: 0 25px;
+        }
+
+
+        .hero-box {
+
+            min-height: 440px;
+
+            border-radius: 30px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #e1eae0,
+                    #f4efe5
+                );
+
+            display: flex;
+
+            align-items: center;
+
+            padding: 65px;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+
+        .circle-one {
+
+            position: absolute;
+
+            width: 330px;
+
+            height: 330px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(255,255,255,0.4);
+
+            left: 7%;
+
+            top: 50%;
+
+            transform:
+                translateY(-50%);
+        }
+
+
+        .circle-two {
+
+            position: absolute;
+
+            width: 150px;
+
+            height: 150px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(112,139,121,0.12);
+
+            left: 27%;
+
+            top: 12%;
+        }
+
+
+        .hero-content {
+
+            position: relative;
+
+            z-index: 2;
+
+            max-width: 600px;
+        }
+
+
+        .eyebrow {
+
+            color: #708b79;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 14px;
+        }
+
+
+        .hero h1 {
+
+            color: #304238;
+
+            font-size: 50px;
+
+            line-height: 1.4;
+
+            margin-bottom: 18px;
+        }
+
+
+        .hero h1 span {
+
+            color: #708b79;
+        }
+
+
+        .hero p {
+
+            color: #69766e;
+
+            font-size: 14px;
+
+            line-height: 2.1;
+
+            max-width: 520px;
+        }
+
+
+        /* =========================
+           SECTIONS
+        ========================== */
+
+        .section {
+
+            max-width: 1200px;
+
+            margin: 85px auto;
+
+            padding: 0 25px;
+        }
+
+
+        .section-title {
+
+            margin-bottom: 30px;
+        }
+
+
+        .section-title small {
+
+            color: #708b79;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            letter-spacing: 1px;
+        }
+
+
+        .section-title h2 {
+
+            color: #304238;
+
+            font-size: 30px;
+
+            margin-top: 7px;
+        }
+
+
+        .section-title p {
+
+            color: #849087;
+
+            font-size: 12px;
+
+            margin-top: 7px;
+        }
+
+
+        /* =========================
+           STORY
+        ========================== */
+
+        .story {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 25px;
+        }
+
+
+        .story-card {
+
+            background: #fffdf8;
+
+            border:
+                1px solid #e3e6df;
+
+            border-radius: 23px;
+
+            padding: 32px;
+        }
+
+
+        .story-card h3 {
+
+            color: #405247;
+
+            font-size: 20px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .story-card p {
+
+            color: #758179;
+
+            font-size: 12px;
+
+            line-height: 2.2;
+
+            margin-bottom: 12px;
+        }
+
+
+        /* =========================
+           VALUES
+        ========================== */
+
+        .values {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 18px;
+        }
+
+
+        .value {
+
+            background: #fffdf8;
+
+            border:
+                1px solid #e3e6df;
+
+            border-radius: 20px;
+
+            padding: 27px;
+
+            transition: 0.3s;
+        }
+
+
+        .value:hover {
+
+            transform: translateY(-6px);
+
+            box-shadow:
+                0 15px 35px
+                rgba(70,90,75,0.09);
+        }
+
+
+        .value-icon {
+
+            font-size: 28px;
+
+            margin-bottom: 14px;
+        }
+
+
+        .value h3 {
+
+            color: #405247;
+
+            font-size: 16px;
+
+            margin-bottom: 8px;
+        }
+
+
+        .value p {
+
+            color: #849087;
+
+            font-size: 11px;
+
+            line-height: 2;
+        }
+
+
+        /* =========================
+           NUMBERS
+        ========================== */
+
+        .numbers {
+
+            background: #35483d;
+
+            border-radius: 27px;
+
+            padding: 35px;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            gap: 20px;
+
+            text-align: center;
+
+            color: white;
+        }
+
+
+        .number strong {
+
+            display: block;
+
+            font-size: 30px;
+
+            margin-bottom: 6px;
+        }
+
+
+        .number span {
+
+            color: #c6d0c8;
+
+            font-size: 11px;
+        }
+
+
+        /* =========================
+           MISSION
+        ========================== */
+
+        .mission {
+
+            background: #e1eae0;
+
+            border-radius: 27px;
+
+            padding: 50px;
+
+            text-align: center;
+        }
+
+
+        .mission-icon {
+
+            font-size: 32px;
+
+            margin-bottom: 13px;
+        }
+
+
+        .mission h2 {
+
+            color: #304238;
+
+            font-size: 28px;
+
+            margin-bottom: 12px;
+        }
+
+
+        .mission p {
+
+            color: #66736b;
+
+            font-size: 13px;
+
+            line-height: 2.2;
+
+            max-width: 650px;
+
+            margin: auto;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+
+            margin-top: 100px;
+
+            background: #35483d;
+
+            color: white;
+
+            padding: 50px 25px 25px;
+        }
+
+
+        .footer-inner {
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                1.5fr 1fr 1fr;
+
+            gap: 40px;
+        }
+
+
+        .footer-logo {
+
+            font-size: 25px;
+
+            font-weight: 800;
+
+            letter-spacing: 4px;
+
+            margin-bottom: 12px;
+        }
+
+
+        .footer-about {
+
+            color: #c6d0c8;
+
+            font-size: 11px;
+
+            line-height: 2;
+        }
+
+
+        .footer-column h3 {
+
+            font-size: 13px;
+
+            margin-bottom: 14px;
+        }
+
+
+        .footer-column a {
+
+            display: block;
+
+            color: #c6d0c8;
+
+            font-size: 11px;
+
+            margin-bottom: 9px;
+        }
+
+
+        .copyright {
+
+            max-width: 1200px;
+
+            margin: 35px auto 0;
+
+            padding-top: 18px;
+
+            border-top:
+                1px solid
+                rgba(255,255,255,0.12);
+
+            text-align: center;
+
+            color: #aeb9b1;
+
+            font-size: 9px;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================== */
+
+        @media (max-width: 750px) {
+
+            header {
+                height: 65px;
+            }
+
+
+            .navbar {
+                padding: 0 15px;
+            }
+
+
+            .logo {
+                font-size: 23px;
+            }
+
+
+            .back-home {
+                padding: 9px 12px;
+                font-size: 10px;
+            }
+
+
+            .hero {
+                margin-top: 15px;
+                padding: 0 15px;
+            }
+
+
+            .hero-box {
+                min-height: 470px;
+
+                padding: 35px 25px;
+
+                border-radius: 24px;
+
+                align-items: flex-start;
+            }
+
+
+            .hero h1 {
+                font-size: 37px;
+            }
+
+
+            .hero p {
+                font-size: 12px;
+            }
+
+
+            .circle-one {
+                width: 260px;
+                height: 260px;
+
+                left: -70px;
+
+                top: auto;
+
+                bottom: -70px;
+
+                transform: none;
+            }
+
+
+            .circle-two {
+                width: 100px;
+                height: 100px;
+
+                left: auto;
+
+                right: 10%;
+
+                top: 8%;
+            }
+
+
+            .section {
+                margin: 60px auto;
+
+                padding: 0 15px;
+            }
+
+
+            .section-title h2 {
+                font-size: 25px;
+            }
+
+
+            .story {
+                grid-template-columns: 1fr;
+            }
+
+
+            .story-card {
+                padding: 24px;
+            }
+
+
+            .values {
+                grid-template-columns: 1fr;
+            }
+
+
+            .numbers {
+                grid-template-columns: 1fr;
+
+                padding: 30px 20px;
+            }
+
+
+            .mission {
+                padding: 35px 22px;
+            }
+
+
+            .mission h2 {
+                font-size: 24px;
+            }
+
+
+            .footer-inner {
+                grid-template-columns: 1fr;
+
+                gap: 30px;
+            }
+
+
+            footer {
+                margin-top: 70px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================== -->
+
+<header>
+
+    <nav class="navbar">
+
+
+        <a
+            href="viorahome.html"
+            class="logo">
+
+            VIORA
+
+        </a>
+
+
+        <a
+            href="viorahome.html"
+            class="back-home">
+
+            ← بازگشت به فروشگاه
+
+        </a>
+
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================
+     HERO
+========================== -->
+
+<section class="hero">
+
+
+    <div class="hero-box">
+
+
+        <div class="circle-one"></div>
+
+        <div class="circle-two"></div>
+
+
+        <div class="hero-content">
+
+
+            <div class="eyebrow">
+
+                ABOUT VIORA
+
+            </div>
+
+
+            <h1>
+
+                فقط لباس نیست؛
+                <br>
+
+                <span>
+                    یک انتخابه.
+                </span>
+
+            </h1>
+
+
+            <p>
+
+                ما در Viora باور داریم استایل واقعی
+                زمانی شکل می‌گیرد که چیزی را انتخاب
+                می‌کنی که واقعاً با خودت هماهنگ است.
+
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================
+     STORY
+========================== -->
+
+<section class="section">
+
+
+    <div class="section-title">
+
+
+        <small>
+            OUR STORY
+        </small>
+
+
+        <h2>
+            داستان ویورا
+        </h2>
+
+
+        <p>
+            از یک ایده ساده تا ساختن یک تجربه متفاوت.
+        </p>
+
+
+    </div>
+
+
+
+    <div class="story">
+
+
+        <div class="story-card">
+
+
+            <h3>
+                چرا Viora؟
+            </h3>
+
+
+            <p>
+
+                ویورا با یک ایده ساده شروع شد:
+                ساختن فضایی که پیدا کردن لباس
+                مناسب را راحت‌تر، ساده‌تر و لذت‌بخش‌تر کند.
+
+            </p>
+
+
+            <p>
+
+                ما نمی‌خواستیم فقط مجموعه‌ای از لباس‌ها
+                را کنار هم قرار دهیم؛ می‌خواستیم
+                تجربه‌ای بسازیم که هر انتخاب در آن
+                حس خوبی داشته باشد.
+
+            </p>
+
+
+        </div>
+
+
+
+        <div class="story-card">
+
+
+            <h3>
+                نگاه ما
+            </h3>
+
+
+            <p>
+
+                طراحی مینیمال، رنگ‌های آرام و
+                توجه به جزئیات، بخش مهمی از
+                هویت Viora هستند.
+
+            </p>
+
+
+            <p>
+
+                برای ما زیبایی فقط ظاهر نیست؛
+                راحتی، کیفیت و حس خوب هم بخشی
+                از یک انتخاب درست هستند.
+
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================
+     VALUES
+========================== -->
+
+<section class="section">
+
+
+    <div class="section-title">
+
+
+        <small>
+            OUR VALUES
+        </small>
+
+
+        <h2>
+            ارزش‌های ما
+        </h2>
+
+
+        <p>
+            چیزهایی که Viora را می‌سازند.
+        </p>
+
+
+    </div>
+
+
+
+    <div class="values">
+
+
+        <div class="value">
+
+
+            <div class="value-icon">
+                ✦
+            </div>
+
+
+            <h3>
+                سادگی
+            </h3>
+
+
+            <p>
+
+                طراحی ساده اما فکرشده،
+                برای استایلی که همیشه جذاب بماند.
+
+            </p>
+
+
+        </div>
+
+
+
+        <div class="value">
+
+
+            <div class="value-icon">
+                ♡
+            </div>
+
+
+            <h3>
+                کیفیت
+            </h3>
+
+
+            <p>
+
+                توجه به جزئیات و انتخاب
+                محصولاتی که ارزش انتخاب شدن دارند.
+
+            </p>
+
+
+        </div>
+
+
+
+        <div class="value">
+
+
+            <div class="value-icon">
+                ✨
+            </div>
+
+
+            <h3>
+                متفاوت بودن
+            </h3>
+
+
+            <p>
+
+                قرار نیست شبیه همه باشی؛
+                استایل تو باید مخصوص خودت باشد.
+
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================
+     NUMBERS
+========================== -->
+
+<section class="section">
+
+
+    <div class="numbers">
+
+
+        <div class="number">
+
+
+            <strong
+                class="counter"
+                data-target="100">
+
+                0
+
+            </strong>
+
+
+            <span>
+                انتخاب متفاوت
+            </span>
+
+
+        </div>
+
+
+
+        <div class="number">
+
+
+            <strong
+                class="counter"
+                data-target="24">
+
+                0
+
+            </strong>
+
+
+            <span>
+                ساعت همراهی
+            </span>
+
+
+        </div>
+
+
+
+        <div class="number">
+
+
+            <strong
+                class="counter"
+                data-target="1">
+
+                0
+
+            </strong>
+
+
+            <span>
+                هدف؛ رضایت شما
+            </span>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================
+     MISSION
+========================== -->
+
+<section class="section">
+
+
+    <div class="mission">
+
+
+        <div class="mission-icon">
+            🌿
+        </div>
+
+
+        <h2>
+            هدف ما؟
+        </h2>
+
+
+        <p>
+
+            ساختن تجربه‌ای ساده، زیبا و قابل اعتماد
+            برای انتخاب لباس؛ جایی که هرکس بتواند
+            سبک خودش را پیدا کند و با انتخابش
+            احساس خوبی داشته باشد.
+
+        </p>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================== -->
+
+<footer>
+
+
+    <div class="footer-inner">
+
+
+        <div>
+
+
+            <div class="footer-logo">
+                VIORA
+            </div>
+
+
+            <p class="footer-about">
+
+                فروشگاه آنلاین پوشاک با نگاهی مدرن،
+                ساده و متفاوت.
+
+            </p>
+
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+
+            <h3>
+                دسترسی سریع
+            </h3>
+
+
+            <a href="viorahome.html">
+                خانه
+            </a>
+
+
+            <a href="viorahome.html#products">
+                محصولات
+            </a>
+
+
+            <a href="account.html">
+                حساب کاربری
+            </a>
+
+
+            <a href="cart.html">
+                سبد خرید
+            </a>
+
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+
+            <h3>
+                Viora
+            </h3>
+
+
+            <a href="about.html">
+                درباره ما
+            </a>
+
+
+            <a href="#">
+                تماس با ما
+            </a>
+
+
+            <a href="#">
+                قوانین و مقررات
+            </a>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="copyright">
+
+        © 2026 Viora — تمامی حقوق محفوظ است.
+
+    </div>
+
+
+</footer>
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================== -->
+
+<script>
+
+
+// ======================================
+// COUNTER ANIMATION
+// ======================================
+
+const counters =
+    document.querySelectorAll(".counter");
+
+
+counters.forEach(counter => {
+
+
+    const target =
+        Number(counter.dataset.target);
+
+
+    let current = 0;
+
+
+    const step =
+        Math.max(1, Math.ceil(target / 40));
+
+
+    const timer =
+        setInterval(() => {
+
+
+            current += step;
+
+
+            if (current >= target) {
+
+                current = target;
+
+                clearInterval(timer);
+
+            }
+
+
+            counter.textContent =
+                new Intl.NumberFormat("fa-IR")
+                    .format(current);
+
+        }, 35);
+
+});
+
+
+</script>
+
+
+</body>
+
+</html>
+```

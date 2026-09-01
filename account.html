@@ -1,0 +1,2011 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>حساب کاربری | Viora</title>
+
+
+    <!-- =========================
+         FONT
+    ========================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+
+        /* =========================
+           RESET
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            font-family: "Vazirmatn", sans-serif;
+
+            background: #f7f3e9;
+
+            color: #35483d;
+
+            min-height: 100vh;
+
+            overflow-x: hidden;
+        }
+
+
+        button,
+        input {
+
+            font-family: inherit;
+        }
+
+
+        button {
+
+            cursor: pointer;
+        }
+
+
+        a {
+
+            text-decoration: none;
+
+            color: inherit;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================== */
+
+        header {
+
+            height: 75px;
+
+            background: rgba(255,253,247,0.96);
+
+            backdrop-filter: blur(12px);
+
+            border-bottom:
+                1px solid #e3e5de;
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+        }
+
+
+        .navbar {
+
+            max-width: 1200px;
+
+            height: 100%;
+
+            margin: auto;
+
+            padding: 0 25px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+        }
+
+
+        .logo {
+
+            font-size: 27px;
+
+            font-weight: 800;
+
+            letter-spacing: 4px;
+
+            color: #708b79;
+        }
+
+
+        .back-home {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            background: #edf1e9;
+
+            color: #52665a;
+
+            border: none;
+
+            padding: 11px 17px;
+
+            border-radius: 11px;
+
+            font-size: 12px;
+
+            transition: 0.3s;
+        }
+
+
+        .back-home:hover {
+
+            background: #dce6dc;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           PAGE
+        ========================== */
+
+        .page {
+
+            max-width: 1200px;
+
+            margin: 55px auto;
+
+            padding: 0 25px;
+        }
+
+
+        .page-title {
+
+            margin-bottom: 30px;
+        }
+
+
+        .page-title small {
+
+            color: #708b79;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            letter-spacing: 1px;
+        }
+
+
+        .page-title h1 {
+
+            font-size: 35px;
+
+            color: #304238;
+
+            margin-top: 8px;
+        }
+
+
+        .page-title p {
+
+            color: #7e8982;
+
+            font-size: 13px;
+
+            margin-top: 8px;
+        }
+
+
+        /* =========================
+           LAYOUT
+        ========================== */
+
+        .account-layout {
+
+            display: grid;
+
+            grid-template-columns: 270px 1fr;
+
+            gap: 25px;
+
+            align-items: start;
+        }
+
+
+        /* =========================
+           SIDEBAR
+        ========================== */
+
+        .sidebar {
+
+            background: #fffdf8;
+
+            border:
+                1px solid #e3e6df;
+
+            border-radius: 23px;
+
+            padding: 20px;
+
+            position: sticky;
+
+            top: 100px;
+        }
+
+
+        .profile-mini {
+
+            text-align: center;
+
+            padding: 15px 10px 22px;
+
+            border-bottom:
+                1px solid #edf0ea;
+        }
+
+
+        .profile-avatar {
+
+            width: 72px;
+
+            height: 72px;
+
+            margin: auto;
+
+            border-radius: 50%;
+
+            background: #e4ece2;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 30px;
+        }
+
+
+        .profile-mini h3 {
+
+            color: #35483d;
+
+            font-size: 16px;
+
+            margin-top: 12px;
+        }
+
+
+        .profile-mini p {
+
+            color: #929b95;
+
+            font-size: 10px;
+
+            margin-top: 4px;
+        }
+
+
+        .sidebar-menu {
+
+            list-style: none;
+
+            margin-top: 15px;
+        }
+
+
+        .sidebar-menu li {
+
+            margin-bottom: 6px;
+        }
+
+
+        .sidebar-menu button {
+
+            width: 100%;
+
+            border: none;
+
+            background: transparent;
+
+            color: #68766d;
+
+            text-align: right;
+
+            padding: 13px 12px;
+
+            border-radius: 11px;
+
+            font-size: 12px;
+
+            transition: 0.3s;
+        }
+
+
+        .sidebar-menu button:hover {
+
+            background: #edf1e9;
+
+            color: #4c6253;
+        }
+
+
+        .sidebar-menu button.active {
+
+            background: #708b79;
+
+            color: white;
+        }
+
+
+        .logout {
+
+            margin-top: 12px;
+
+            padding-top: 15px;
+
+            border-top:
+                1px solid #edf0ea;
+        }
+
+
+        .logout button {
+
+            color: #9a6d6d;
+        }
+
+
+        .logout button:hover {
+
+            background: #f3e7e7;
+
+            color: #8c5c5c;
+        }
+
+
+        /* =========================
+           CONTENT
+        ========================== */
+
+        .content {
+
+            min-width: 0;
+        }
+
+
+        .panel {
+
+            display: none;
+
+            background: #fffdf8;
+
+            border:
+                1px solid #e3e6df;
+
+            border-radius: 23px;
+
+            padding: 30px;
+
+            animation: fadeIn 0.3s ease;
+        }
+
+
+        .panel.active {
+
+            display: block;
+        }
+
+
+        @keyframes fadeIn {
+
+            from {
+
+                opacity: 0;
+
+                transform: translateY(8px);
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform: translateY(0);
+            }
+        }
+
+
+        .panel-title {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 15px;
+
+            margin-bottom: 25px;
+        }
+
+
+        .panel-title h2 {
+
+            color: #35483d;
+
+            font-size: 21px;
+        }
+
+
+        .panel-title p {
+
+            color: #8a948d;
+
+            font-size: 11px;
+
+            margin-top: 5px;
+        }
+
+
+        /* =========================
+           DASHBOARD
+        ========================== */
+
+        .welcome {
+
+            background: #e3ebe1;
+
+            border-radius: 18px;
+
+            padding: 25px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .welcome h2 {
+
+            color: #35483d;
+
+            font-size: 22px;
+        }
+
+
+        .welcome p {
+
+            color: #69776e;
+
+            font-size: 12px;
+
+            line-height: 2;
+
+            margin-top: 8px;
+        }
+
+
+        .stats {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            gap: 15px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .stat {
+
+            padding: 20px;
+
+            background: #f7f3e9;
+
+            border-radius: 16px;
+
+            border:
+                1px solid #e7e4da;
+        }
+
+
+        .stat span {
+
+            display: block;
+
+            color: #89938c;
+
+            font-size: 10px;
+
+            margin-bottom: 7px;
+        }
+
+
+        .stat strong {
+
+            color: #52665a;
+
+            font-size: 23px;
+        }
+
+
+        /* =========================
+           PROFILE
+        ========================== */
+
+        .profile-form {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2,1fr);
+
+            gap: 18px;
+        }
+
+
+        .input-group {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 7px;
+        }
+
+
+        .input-group.full {
+
+            grid-column: 1 / -1;
+        }
+
+
+        .input-group label {
+
+            color: #66746b;
+
+            font-size: 11px;
+        }
+
+
+        .input-group input {
+
+            width: 100%;
+
+            border:
+                1px solid #dfe5dc;
+
+            background: #f9f6ee;
+
+            color: #405247;
+
+            outline: none;
+
+            padding: 13px;
+
+            border-radius: 11px;
+
+            font-size: 12px;
+
+            transition: 0.3s;
+        }
+
+
+        .input-group input:focus {
+
+            border-color: #9daf9f;
+
+            background: white;
+        }
+
+
+        .save-btn {
+
+            margin-top: 20px;
+
+            border: none;
+
+            background: #708b79;
+
+            color: white;
+
+            padding: 13px 25px;
+
+            border-radius: 11px;
+
+            font-size: 12px;
+
+            transition: 0.3s;
+        }
+
+
+        .save-btn:hover {
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 8px 20px
+                rgba(75,100,82,0.18);
+        }
+
+
+        /* =========================
+           ORDERS
+        ========================== */
+
+        .order {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 15px;
+
+            padding: 18px;
+
+            background: #f9f6ee;
+
+            border:
+                1px solid #e7e4da;
+
+            border-radius: 15px;
+
+            margin-bottom: 12px;
+        }
+
+
+        .order-info strong {
+
+            display: block;
+
+            color: #46594c;
+
+            font-size: 13px;
+
+            margin-bottom: 5px;
+        }
+
+
+        .order-info span {
+
+            color: #8b958e;
+
+            font-size: 10px;
+        }
+
+
+        .order-status {
+
+            background: #e1ebe0;
+
+            color: #5d7463;
+
+            padding: 7px 11px;
+
+            border-radius: 20px;
+
+            font-size: 9px;
+        }
+
+
+        /* =========================
+           FAVORITES
+        ========================== */
+
+        .empty {
+
+            text-align: center;
+
+            padding: 55px 20px;
+
+            color: #8a948d;
+        }
+
+
+        .empty-icon {
+
+            font-size: 42px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .empty h3 {
+
+            color: #56665c;
+
+            font-size: 17px;
+
+            margin-bottom: 7px;
+        }
+
+
+        .empty p {
+
+            font-size: 11px;
+        }
+
+
+        /* =========================
+           SETTINGS
+        ========================== */
+
+        .setting {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            padding: 17px 0;
+
+            border-bottom:
+                1px solid #edf0ea;
+        }
+
+
+        .setting:last-child {
+
+            border-bottom: none;
+        }
+
+
+        .setting-text strong {
+
+            display: block;
+
+            color: #4a5c50;
+
+            font-size: 13px;
+
+            margin-bottom: 5px;
+        }
+
+
+        .setting-text span {
+
+            color: #909a93;
+
+            font-size: 10px;
+        }
+
+
+        .switch {
+
+            width: 45px;
+
+            height: 24px;
+
+            border: none;
+
+            border-radius: 30px;
+
+            background: #cfd7d0;
+
+            position: relative;
+
+            transition: 0.3s;
+        }
+
+
+        .switch::after {
+
+            content: "";
+
+            width: 18px;
+
+            height: 18px;
+
+            background: white;
+
+            border-radius: 50%;
+
+            position: absolute;
+
+            top: 3px;
+
+            right: 3px;
+
+            transition: 0.3s;
+        }
+
+
+        .switch.active {
+
+            background: #708b79;
+        }
+
+
+        .switch.active::after {
+
+            right: 24px;
+        }
+
+
+        /* =========================
+           TOAST
+        ========================== */
+
+        .toast {
+
+            position: fixed;
+
+            bottom: 25px;
+
+            right: 25px;
+
+            background: #35483d;
+
+            color: white;
+
+            padding: 13px 20px;
+
+            border-radius: 12px;
+
+            font-size: 11px;
+
+            opacity: 0;
+
+            transform: translateY(20px);
+
+            pointer-events: none;
+
+            transition: 0.3s;
+
+            z-index: 3000;
+        }
+
+
+        .toast.show {
+
+            opacity: 1;
+
+            transform: translateY(0);
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================== */
+
+        @media (max-width: 800px) {
+
+            header {
+
+                height: 65px;
+            }
+
+
+            .navbar {
+
+                padding: 0 15px;
+            }
+
+
+            .logo {
+
+                font-size: 23px;
+            }
+
+
+            .back-home {
+
+                padding: 9px 12px;
+
+                font-size: 10px;
+            }
+
+
+            .page {
+
+                margin: 35px auto;
+
+                padding: 0 15px;
+            }
+
+
+            .page-title h1 {
+
+                font-size: 29px;
+            }
+
+
+            .account-layout {
+
+                grid-template-columns: 1fr;
+
+                gap: 15px;
+            }
+
+
+            .sidebar {
+
+                position: static;
+
+                padding: 12px;
+            }
+
+
+            .profile-mini {
+
+                display: flex;
+
+                align-items: center;
+
+                text-align: right;
+
+                gap: 12px;
+
+                padding: 8px;
+
+                border-bottom: none;
+            }
+
+
+            .profile-avatar {
+
+                width: 55px;
+
+                height: 55px;
+
+                margin: 0;
+
+                flex-shrink: 0;
+            }
+
+
+            .profile-mini h3 {
+
+                margin-top: 0;
+            }
+
+
+            .sidebar-menu {
+
+                display: grid;
+
+                grid-template-columns:
+                    repeat(3,1fr);
+
+                gap: 5px;
+
+                margin-top: 8px;
+            }
+
+
+            .sidebar-menu li {
+
+                margin: 0;
+            }
+
+
+            .sidebar-menu button {
+
+                text-align: center;
+
+                padding: 10px 5px;
+
+                font-size: 9px;
+            }
+
+
+            .logout {
+
+                margin-top: 7px;
+
+                padding-top: 7px;
+            }
+
+
+            .panel {
+
+                padding: 20px;
+
+                border-radius: 20px;
+            }
+
+
+            .stats {
+
+                grid-template-columns:
+                    repeat(3,1fr);
+
+                gap: 8px;
+            }
+
+
+            .stat {
+
+                padding: 13px 8px;
+
+                text-align: center;
+            }
+
+
+            .stat strong {
+
+                font-size: 18px;
+            }
+
+
+            .profile-form {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .input-group.full {
+
+                grid-column: auto;
+            }
+
+
+            .order {
+
+                align-items: flex-start;
+
+                flex-direction: column;
+            }
+
+
+            .toast {
+
+                left: 15px;
+
+                right: 15px;
+
+                text-align: center;
+            }
+        }
+
+
+        @media (max-width: 420px) {
+
+            .sidebar-menu {
+
+                grid-template-columns:
+                    repeat(2,1fr);
+            }
+
+
+            .stats {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .panel-title h2 {
+
+                font-size: 18px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================== -->
+
+<header>
+
+    <nav class="navbar">
+
+        <a
+            href="viorahome.html"
+            class="logo">
+
+            VIORA
+
+        </a>
+
+
+        <a
+            href="viorahome.html"
+            class="back-home">
+
+            ← بازگشت به فروشگاه
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================
+     MAIN
+========================== -->
+
+<main class="page">
+
+
+    <div class="page-title">
+
+        <small>
+            VIORA ACCOUNT
+        </small>
+
+        <h1>
+            حساب کاربری
+        </h1>
+
+        <p>
+            همه چیز درباره حساب و سفارش‌های تو، یکجا.
+        </p>
+
+    </div>
+
+
+
+    <div class="account-layout">
+
+
+        <!-- =========================
+             SIDEBAR
+        ========================== -->
+
+        <aside class="sidebar">
+
+
+            <div class="profile-mini">
+
+                <div class="profile-avatar">
+                    👤
+                </div>
+
+                <div>
+
+                    <h3>
+                        کاربر ویورا
+                    </h3>
+
+                    <p>
+                        عضو خانواده Viora
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <ul class="sidebar-menu">
+
+                <li>
+
+                    <button
+                        class="menu-item active"
+                        data-panel="dashboard">
+
+                        🏠 خانه
+
+                    </button>
+
+                </li>
+
+
+                <li>
+
+                    <button
+                        class="menu-item"
+                        data-panel="profile">
+
+                        👤 اطلاعات من
+
+                    </button>
+
+                </li>
+
+
+                <li>
+
+                    <button
+                        class="menu-item"
+                        data-panel="orders">
+
+                        📦 سفارش‌ها
+
+                    </button>
+
+                </li>
+
+
+                <li>
+
+                    <button
+                        class="menu-item"
+                        data-panel="favorites">
+
+                        ♡ علاقه‌مندی‌ها
+
+                    </button>
+
+                </li>
+
+
+                <li>
+
+                    <button
+                        class="menu-item"
+                        data-panel="settings">
+
+                        ⚙️ تنظیمات
+
+                    </button>
+
+                </li>
+
+            </ul>
+
+
+
+            <div class="logout">
+
+                <button
+                    class="menu-item"
+                    id="logoutBtn">
+
+                    🚪 خروج از حساب
+
+                </button>
+
+            </div>
+
+
+        </aside>
+
+
+
+        <!-- =========================
+             CONTENT
+        ========================== -->
+
+        <section class="content">
+
+
+            <!-- DASHBOARD -->
+
+            <div
+                class="panel active"
+                id="dashboard">
+
+
+                <div class="welcome">
+
+                    <h2>
+                        خوش اومدی 👋
+                    </h2>
+
+                    <p>
+                        اینجا می‌تونی اطلاعات حساب،
+                        سفارش‌ها و علاقه‌مندی‌های خودت رو
+                        مدیریت کنی.
+                    </p>
+
+                </div>
+
+
+
+                <div class="stats">
+
+
+                    <div class="stat">
+
+                        <span>
+                            سفارش‌ها
+                        </span>
+
+                        <strong>
+                            ۰
+                        </strong>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <span>
+                            علاقه‌مندی‌ها
+                        </span>
+
+                        <strong>
+                            ۰
+                        </strong>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <span>
+                            امتیاز
+                        </span>
+
+                        <strong>
+                            ۰
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div>
+
+                    <div class="panel-title">
+
+                        <div>
+
+                            <h2>
+                                فعالیت اخیر
+                            </h2>
+
+                            <p>
+                                آخرین فعالیت‌های حساب شما
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="empty">
+
+                        <div class="empty-icon">
+                            ✦
+                        </div>
+
+                        <h3>
+                            هنوز فعالیتی نداری
+                        </h3>
+
+                        <p>
+                            با خرید از ویورا، فعالیت‌های
+                            حساب اینجا نمایش داده می‌شوند.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- PROFILE -->
+
+            <div
+                class="panel"
+                id="profile">
+
+
+                <div class="panel-title">
+
+                    <div>
+
+                        <h2>
+                            اطلاعات من
+                        </h2>
+
+                        <p>
+                            اطلاعات حساب کاربری خود را مدیریت کن.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <form
+                    class="profile-form"
+                    id="profileForm">
+
+
+                    <div class="input-group">
+
+                        <label>
+                            نام
+                        </label>
+
+                        <input
+                            type="text"
+                            id="firstName"
+                            placeholder="نام شما">
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            نام خانوادگی
+                        </label>
+
+                        <input
+                            type="text"
+                            id="lastName"
+                            placeholder="نام خانوادگی">
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            ایمیل
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="example@email.com">
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            شماره موبایل
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            placeholder="۰۹۱۲۱۲۳۴۵۶۷">
+
+                    </div>
+
+
+                    <div class="input-group full">
+
+                        <label>
+                            آدرس
+                        </label>
+
+                        <input
+                            type="text"
+                            id="address"
+                            placeholder="آدرس شما">
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            شهر
+                        </label>
+
+                        <input
+                            type="text"
+                            id="city"
+                            placeholder="شهر">
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            کد پستی
+                        </label>
+
+                        <input
+                            type="text"
+                            id="postalCode"
+                            placeholder="کد پستی">
+
+                    </div>
+
+
+                </form>
+
+
+                <button
+                    class="save-btn"
+                    id="saveProfile">
+
+                    ذخیره اطلاعات
+
+                </button>
+
+
+            </div>
+
+
+
+            <!-- ORDERS -->
+
+            <div
+                class="panel"
+                id="orders">
+
+
+                <div class="panel-title">
+
+                    <div>
+
+                        <h2>
+                            سفارش‌های من
+                        </h2>
+
+                        <p>
+                            سفارش‌های ثبت‌شده شما
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="empty">
+
+                    <div class="empty-icon">
+                        📦
+                    </div>
+
+                    <h3>
+                        هنوز سفارشی ثبت نکردی
+                    </h3>
+
+                    <p>
+                        وقتی سفارشی ثبت کنی، اطلاعات آن
+                        اینجا نمایش داده می‌شود.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- FAVORITES -->
+
+            <div
+                class="panel"
+                id="favorites">
+
+
+                <div class="panel-title">
+
+                    <div>
+
+                        <h2>
+                            علاقه‌مندی‌ها
+                        </h2>
+
+                        <p>
+                            محصولاتی که دوست داری.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="empty">
+
+                    <div class="empty-icon">
+                        ♡
+                    </div>
+
+                    <h3>
+                        هنوز محصولی ذخیره نکردی
+                    </h3>
+
+                    <p>
+                        روی قلب محصولات مورد علاقه‌ات بزن
+                        تا اینجا ذخیره شوند.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- SETTINGS -->
+
+            <div
+                class="panel"
+                id="settings">
+
+
+                <div class="panel-title">
+
+                    <div>
+
+                        <h2>
+                            تنظیمات
+                        </h2>
+
+                        <p>
+                            تنظیمات حساب کاربری
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="setting">
+
+                    <div class="setting-text">
+
+                        <strong>
+                            اعلان‌ها
+                        </strong>
+
+                        <span>
+                            دریافت اطلاع‌رسانی درباره سفارش‌ها
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        class="switch active">
+
+                    </button>
+
+                </div>
+
+
+
+                <div class="setting">
+
+                    <div class="setting-text">
+
+                        <strong>
+                            خبرنامه ویورا
+                        </strong>
+
+                        <span>
+                            دریافت اخبار و کالکشن‌های جدید
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        class="switch">
+
+                    </button>
+
+                </div>
+
+
+
+                <div class="setting">
+
+                    <div class="setting-text">
+
+                        <strong>
+                            پیشنهادهای شخصی
+                        </strong>
+
+                        <span>
+                            نمایش پیشنهادها بر اساس سلیقه شما
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        class="switch active">
+
+                    </button>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </div>
+
+</main>
+
+
+
+<!-- =========================
+     TOAST
+========================== -->
+
+<div
+    class="toast"
+    id="toast">
+
+    اطلاعات با موفقیت ذخیره شد ✓
+
+</div>
+
+
+
+<script>
+
+
+// ======================================
+// PANEL NAVIGATION
+// ======================================
+
+const menuItems =
+    document.querySelectorAll(".menu-item[data-panel]");
+
+
+const panels =
+    document.querySelectorAll(".panel");
+
+
+menuItems.forEach(item => {
+
+    item.addEventListener("click", () => {
+
+
+        const target =
+            item.dataset.panel;
+
+
+        menuItems.forEach(button => {
+
+            button.classList.remove("active");
+
+        });
+
+
+        item.classList.add("active");
+
+
+        panels.forEach(panel => {
+
+            panel.classList.remove("active");
+
+        });
+
+
+        document
+            .getElementById(target)
+            .classList.add("active");
+
+
+        window.scrollTo({
+
+            top: 0,
+
+            behavior: "smooth"
+
+        });
+
+    });
+
+});
+
+
+
+// ======================================
+// SAVE PROFILE
+// ======================================
+
+const saveProfile =
+    document.getElementById("saveProfile");
+
+
+const toast =
+    document.getElementById("toast");
+
+
+saveProfile.addEventListener("click", () => {
+
+
+    const profile = {
+
+        firstName:
+            document.getElementById("firstName").value,
+
+        lastName:
+            document.getElementById("lastName").value,
+
+        email:
+            document.getElementById("email").value,
+
+        phone:
+            document.getElementById("phone").value,
+
+        address:
+            document.getElementById("address").value,
+
+        city:
+            document.getElementById("city").value,
+
+        postalCode:
+            document.getElementById("postalCode").value
+
+    };
+
+
+    localStorage.setItem(
+        "vioraProfile",
+        JSON.stringify(profile)
+    );
+
+
+    showToast(
+        "اطلاعات با موفقیت ذخیره شد ✓"
+    );
+
+});
+
+
+
+// ======================================
+// LOAD PROFILE
+// ======================================
+
+const savedProfile =
+    localStorage.getItem("vioraProfile");
+
+
+if (savedProfile) {
+
+
+    const profile =
+        JSON.parse(savedProfile);
+
+
+    document.getElementById("firstName").value =
+        profile.firstName || "";
+
+
+    document.getElementById("lastName").value =
+        profile.lastName || "";
+
+
+    document.getElementById("email").value =
+        profile.email || "";
+
+
+    document.getElementById("phone").value =
+        profile.phone || "";
+
+
+    document.getElementById("address").value =
+        profile.address || "";
+
+
+    document.getElementById("city").value =
+        profile.city || "";
+
+
+    document.getElementById("postalCode").value =
+        profile.postalCode || "";
+
+}
+
+
+
+// ======================================
+// SETTINGS SWITCH
+// ======================================
+
+const switches =
+    document.querySelectorAll(".switch");
+
+
+switches.forEach(toggle => {
+
+    toggle.addEventListener("click", () => {
+
+        toggle.classList.toggle("active");
+
+    });
+
+});
+
+
+
+// ======================================
+// LOGOUT
+// ======================================
+
+const logoutBtn =
+    document.getElementById("logoutBtn");
+
+
+logoutBtn.addEventListener("click", () => {
+
+
+    const confirmed =
+        confirm(
+            "می‌خواهی از حساب کاربری خارج شوی؟"
+        );
+
+
+    if (confirmed) {
+
+        showToast(
+            "از حساب خارج شدی 👋"
+        );
+
+    }
+
+});
+
+
+
+// ======================================
+// TOAST
+// ======================================
+
+function showToast(message) {
+
+
+    toast.textContent =
+        message;
+
+
+    toast.classList.add("show");
+
+
+    setTimeout(() => {
+
+        toast.classList.remove("show");
+
+    }, 2200);
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>
+```

@@ -1,0 +1,1734 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>پوشاک مردانه | VIORA</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+            font-family: "Vazirmatn", sans-serif;
+            background: #f7f3e9;
+            color: #35483d;
+            overflow-x: hidden;
+        }
+
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        button,
+        input {
+            font-family: inherit;
+        }
+
+
+        button {
+            cursor: pointer;
+        }
+
+
+        /* ================= HEADER ================= */
+
+        header {
+
+            height: 75px;
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+            background: rgba(255,253,247,0.96);
+
+            backdrop-filter: blur(12px);
+
+            border-bottom: 1px solid #e3e5de;
+
+        }
+
+
+        .navbar {
+
+            max-width: 1200px;
+
+            height: 100%;
+
+            margin: auto;
+
+            padding: 0 25px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+        }
+
+
+        .logo {
+
+            font-size: 27px;
+
+            font-weight: 800;
+
+            letter-spacing: 4px;
+
+            color: #526b5b;
+
+        }
+
+
+        .nav-actions {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+        }
+
+
+        .nav-btn {
+
+            background: #edf1e9;
+
+            color: #52665a;
+
+            padding: 10px 14px;
+
+            border-radius: 11px;
+
+            font-size: 10px;
+
+            transition: 0.3s;
+
+        }
+
+
+        .nav-btn:hover {
+
+            background: #dce6dc;
+
+            transform: translateY(-2px);
+
+        }
+
+
+
+        /* ================= HERO ================= */
+
+        .hero {
+
+            max-width: 1200px;
+
+            margin: 40px auto;
+
+            padding: 0 25px;
+
+        }
+
+
+        .hero-box {
+
+            min-height: 330px;
+
+            border-radius: 30px;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    #dce5dc,
+                    #eef0e9
+                );
+
+            position: relative;
+
+            overflow: hidden;
+
+            display: flex;
+
+            align-items: center;
+
+            padding: 55px;
+
+        }
+
+
+        .hero-circle {
+
+            position: absolute;
+
+            width: 370px;
+
+            height: 370px;
+
+            border-radius: 50%;
+
+            background: rgba(255,255,255,0.38);
+
+            left: 8%;
+
+            top: 50%;
+
+            transform: translateY(-50%);
+
+        }
+
+
+        .hero-content {
+
+            position: relative;
+
+            z-index: 2;
+
+        }
+
+
+        .hero-small {
+
+            color: #657d6c;
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .hero h1 {
+
+            font-size: 43px;
+
+            color: #35483d;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .hero h1 span {
+
+            color: #708b79;
+
+        }
+
+
+        .hero p {
+
+            max-width: 500px;
+
+            color: #69766e;
+
+            font-size: 12px;
+
+            line-height: 2.2;
+
+        }
+
+
+
+        /* ================= MAIN ================= */
+
+        .page {
+
+            max-width: 1200px;
+
+            margin: 65px auto;
+
+            padding: 0 25px;
+
+        }
+
+
+        .section-title {
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .section-title small {
+
+            color: #708b79;
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+        }
+
+
+        .section-title h2 {
+
+            font-size: 28px;
+
+            color: #35483d;
+
+            margin-top: 7px;
+
+        }
+
+
+
+        /* ================= TOOLBAR ================= */
+
+        .toolbar {
+
+            background: #fffdf8;
+
+            border: 1px solid #e3e7df;
+
+            border-radius: 20px;
+
+            padding: 16px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 15px;
+
+            flex-wrap: wrap;
+
+            margin-bottom: 30px;
+
+        }
+
+
+        .filters {
+
+            display: flex;
+
+            gap: 7px;
+
+            flex-wrap: wrap;
+
+        }
+
+
+        .filter-btn {
+
+            border: none;
+
+            background: #edf1e9;
+
+            color: #52665a;
+
+            padding: 9px 14px;
+
+            border-radius: 10px;
+
+            font-size: 10px;
+
+            transition: 0.3s;
+
+        }
+
+
+        .filter-btn:hover {
+
+            background: #dce6dc;
+
+        }
+
+
+        .filter-btn.active {
+
+            background: #526b5b;
+
+            color: white;
+
+        }
+
+
+        .search-box {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            background: #f1f4ee;
+
+            padding: 9px 13px;
+
+            border-radius: 10px;
+
+            width: 220px;
+
+        }
+
+
+        .search-box input {
+
+            border: none;
+
+            outline: none;
+
+            background: transparent;
+
+            width: 100%;
+
+            font-size: 10px;
+
+        }
+
+
+
+        /* ================= PRODUCTS ================= */
+
+        .products-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 20px;
+
+        }
+
+
+        .product-card {
+
+            background: #fffdf8;
+
+            border: 1px solid #e3e7df;
+
+            border-radius: 22px;
+
+            overflow: hidden;
+
+            transition: 0.35s;
+
+        }
+
+
+        .product-card:hover {
+
+            transform: translateY(-7px);
+
+            box-shadow:
+                0 18px 40px
+                rgba(50,70,55,0.10);
+
+        }
+
+
+        .product-image {
+
+            height: 270px;
+
+            background:
+
+                linear-gradient(
+                    145deg,
+                    #dfe7df,
+                    #f0f2ed
+                );
+
+            position: relative;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+        }
+
+
+        .product-image::before {
+
+            content: "V";
+
+            width: 90px;
+
+            height: 90px;
+
+            border-radius: 50%;
+
+            background: rgba(255,255,255,0.55);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: #526b5b;
+
+            font-size: 30px;
+
+            font-weight: 800;
+
+        }
+
+
+        .badge {
+
+            position: absolute;
+
+            top: 12px;
+
+            right: 12px;
+
+            background: #526b5b;
+
+            color: white;
+
+            padding: 5px 9px;
+
+            border-radius: 8px;
+
+            font-size: 8px;
+
+        }
+
+
+        .favorite {
+
+            position: absolute;
+
+            top: 10px;
+
+            left: 10px;
+
+            width: 36px;
+
+            height: 36px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background: rgba(255,255,255,0.85);
+
+            color: #7d8981;
+
+            font-size: 17px;
+
+        }
+
+
+        .favorite.liked {
+
+            color: #b86d75;
+
+        }
+
+
+        .product-info {
+
+            padding: 17px;
+
+        }
+
+
+        .product-type {
+
+            color: #8a9a8d;
+
+            font-size: 8px;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 6px;
+
+        }
+
+
+        .product-name {
+
+            color: #35483d;
+
+            font-size: 13px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .product-bottom {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+        }
+
+
+        .price {
+
+            color: #526b5b;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+        }
+
+
+        .add-cart {
+
+            width: 35px;
+
+            height: 35px;
+
+            border: none;
+
+            border-radius: 10px;
+
+            background: #edf1e9;
+
+            color: #526b5b;
+
+            font-size: 18px;
+
+            transition: 0.3s;
+
+        }
+
+
+        .add-cart:hover {
+
+            background: #526b5b;
+
+            color: white;
+
+        }
+
+
+
+        /* ================= TOAST ================= */
+
+        .toast {
+
+            position: fixed;
+
+            bottom: 25px;
+
+            left: 50%;
+
+            transform: translate(-50%, 100px);
+
+            background: #35483d;
+
+            color: white;
+
+            padding: 13px 20px;
+
+            border-radius: 12px;
+
+            font-size: 11px;
+
+            opacity: 0;
+
+            transition: 0.35s;
+
+            z-index: 5000;
+
+        }
+
+
+        .toast.show {
+
+            opacity: 1;
+
+            transform: translate(-50%, 0);
+
+        }
+
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+
+            margin-top: 90px;
+
+            background: #35483d;
+
+            color: white;
+
+            padding: 40px 25px 20px;
+
+        }
+
+
+        .footer {
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 30px;
+
+        }
+
+
+        .footer-logo {
+
+            font-size: 24px;
+
+            font-weight: 800;
+
+            letter-spacing: 4px;
+
+        }
+
+
+        .footer-text {
+
+            color: #c6d0c8;
+
+            font-size: 10px;
+
+            margin-top: 7px;
+
+        }
+
+
+        .footer-links {
+
+            display: flex;
+
+            gap: 18px;
+
+            flex-wrap: wrap;
+
+        }
+
+
+        .footer-links a {
+
+            color: #c6d0c8;
+
+            font-size: 10px;
+
+        }
+
+
+
+        /* ================= TABLET ================= */
+
+        @media (max-width: 1000px) {
+
+            .products-grid {
+
+                grid-template-columns: repeat(3, 1fr);
+
+            }
+
+        }
+
+
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 700px) {
+
+            header {
+
+                height: 65px;
+
+            }
+
+
+            .navbar {
+
+                padding: 0 15px;
+
+            }
+
+
+            .logo {
+
+                font-size: 23px;
+
+            }
+
+
+            .nav-btn {
+
+                padding: 8px 10px;
+
+                font-size: 9px;
+
+            }
+
+
+            .hero {
+
+                margin: 20px auto;
+
+                padding: 0 15px;
+
+            }
+
+
+            .hero-box {
+
+                min-height: 400px;
+
+                padding: 35px 25px;
+
+            }
+
+
+            .hero h1 {
+
+                font-size: 34px;
+
+            }
+
+
+            .hero-circle {
+
+                width: 250px;
+
+                height: 250px;
+
+                left: -60px;
+
+                top: auto;
+
+                bottom: -80px;
+
+                transform: none;
+
+            }
+
+
+            .page {
+
+                margin: 50px auto;
+
+                padding: 0 15px;
+
+            }
+
+
+            .toolbar {
+
+                flex-direction: column;
+
+                align-items: stretch;
+
+            }
+
+
+            .search-box {
+
+                width: 100%;
+
+            }
+
+
+            .products-grid {
+
+                grid-template-columns: repeat(2, 1fr);
+
+                gap: 12px;
+
+            }
+
+
+            .product-image {
+
+                height: 220px;
+
+            }
+
+
+            .product-info {
+
+                padding: 13px;
+
+            }
+
+
+            .product-name {
+
+                font-size: 11px;
+
+            }
+
+
+            .price {
+
+                font-size: 9px;
+
+            }
+
+
+            .footer {
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+<header>
+
+    <nav class="navbar">
+
+
+        <a href="viorahome.html" class="logo">
+
+            VIORA
+
+        </a>
+
+
+        <div class="nav-actions">
+
+
+            <a href="categories.html" class="nav-btn">
+
+                دسته‌بندی‌ها
+
+            </a>
+
+
+            <a href="account.html" class="nav-btn">
+
+                👤
+
+            </a>
+
+
+            <a href="cart.html" class="nav-btn">
+
+                🛍️
+
+            </a>
+
+
+        </div>
+
+
+    </nav>
+
+</header>
+
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+
+    <div class="hero-box">
+
+
+        <div class="hero-circle"></div>
+
+
+        <div class="hero-content">
+
+
+            <div class="hero-small">
+
+                VIORA MEN
+
+            </div>
+
+
+            <h1>
+
+                استایل
+
+                <span>
+                    مردانه
+                </span>
+
+            </h1>
+
+
+            <p>
+
+                مجموعه‌ای از لباس‌های مردانه
+                با طراحی مدرن، ساده و کاربردی
+                برای ساختن استایل شخصی تو.
+
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- PRODUCTS -->
+
+<main class="page">
+
+
+    <div class="section-title">
+
+
+        <small>
+
+            MEN COLLECTION
+
+        </small>
+
+
+        <h2>
+
+            محصولات مردانه
+
+        </h2>
+
+
+    </div>
+
+
+
+    <!-- FILTERS -->
+
+    <section class="toolbar">
+
+
+        <div class="filters">
+
+
+            <button class="filter-btn active" data-filter="all">
+                همه
+            </button>
+
+
+            <button class="filter-btn" data-filter="shirt">
+                پیراهن
+            </button>
+
+
+            <button class="filter-btn" data-filter="tshirt">
+                تیشرت
+            </button>
+
+
+            <button class="filter-btn" data-filter="pants">
+                شلوار
+            </button>
+
+
+            <button class="filter-btn" data-filter="jacket">
+                کت
+            </button>
+
+
+        </div>
+
+
+
+        <div class="search-box">
+
+            🔍
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="جستجوی لباس...">
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- PRODUCTS GRID -->
+
+    <section class="products-grid">
+
+
+        <article class="product-card"
+                 data-category="shirt"
+                 data-name="پیراهن مردانه کلاسیک">
+
+
+            <div class="product-image">
+
+                <span class="badge">
+                    جدید
+                </span>
+
+                <button class="favorite">
+                    ♡
+                </button>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <div class="product-type">
+                    SHIRT
+                </div>
+
+                <h3 class="product-name">
+                    پیراهن مردانه کلاسیک
+                </h3>
+
+                <div class="product-bottom">
+
+                    <span class="price">
+                        ۱,۴۹۰,۰۰۰ تومان
+                    </span>
+
+                    <button class="add-cart"
+                            data-product="پیراهن مردانه کلاسیک">
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <article class="product-card"
+                 data-category="tshirt"
+                 data-name="تیشرت مینیمال مردانه">
+
+
+            <div class="product-image">
+
+                <button class="favorite">
+                    ♡
+                </button>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <div class="product-type">
+                    T-SHIRT
+                </div>
+
+                <h3 class="product-name">
+                    تیشرت مینیمال مردانه
+                </h3>
+
+                <div class="product-bottom">
+
+                    <span class="price">
+                        ۸۹۰,۰۰۰ تومان
+                    </span>
+
+                    <button class="add-cart"
+                            data-product="تیشرت مینیمال مردانه">
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <article class="product-card"
+                 data-category="jacket"
+                 data-name="کت مردانه ویورا">
+
+
+            <div class="product-image">
+
+                <span class="badge">
+                    محبوب
+                </span>
+
+                <button class="favorite">
+                    ♡
+                </button>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <div class="product-type">
+                    JACKET
+                </div>
+
+                <h3 class="product-name">
+                    کت مردانه ویورا
+                </h3>
+
+                <div class="product-bottom">
+
+                    <span class="price">
+                        ۲,۶۹۰,۰۰۰ تومان
+                    </span>
+
+                    <button class="add-cart"
+                            data-product="کت مردانه ویورا">
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <article class="product-card"
+                 data-category="pants"
+                 data-name="شلوار پارچه‌ای مردانه">
+
+
+            <div class="product-image">
+
+                <button class="favorite">
+                    ♡
+                </button>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <div class="product-type">
+                    PANTS
+                </div>
+
+                <h3 class="product-name">
+                    شلوار پارچه‌ای مردانه
+                </h3>
+
+                <div class="product-bottom">
+
+                    <span class="price">
+                        ۱,۵۹۰,۰۰۰ تومان
+                    </span>
+
+                    <button class="add-cart"
+                            data-product="شلوار پارچه‌ای مردانه">
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <article class="product-card"
+                 data-category="shirt"
+                 data-name="پیراهن لینن مردانه">
+
+
+            <div class="product-image">
+
+                <span class="badge">
+                    جدید
+                </span>
+
+                <button class="favorite">
+                    ♡
+                </button>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <div class="product-type">
+                    SHIRT
+                </div>
+
+                <h3 class="product-name">
+                    پیراهن لینن مردانه
+                </h3>
+
+                <div class="product-bottom">
+
+                    <span class="price">
+                        ۱,۳۹۰,۰۰۰ تومان
+                    </span>
+
+                    <button class="add-cart"
+                            data-product="پیراهن لینن مردانه">
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <article class="product-card"
+                 data-category="tshirt"
+                 data-name="تیشرت ساده ویورا">
+
+
+            <div class="product-image">
+
+                <button class="favorite">
+                    ♡
+                </button>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <div class="product-type">
+                    T-SHIRT
+                </div>
+
+                <h3 class="product-name">
+                    تیشرت ساده ویورا
+                </h3>
+
+                <div class="product-bottom">
+
+                    <span class="price">
+                        ۷۹۰,۰۰۰ تومان
+                    </span>
+
+                    <button class="add-cart"
+                            data-product="تیشرت ساده ویورا">
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <article class="product-card"
+                 data-category="jacket"
+                 data-name="کت اسپرت مردانه">
+
+
+            <div class="product-image">
+
+                <button class="favorite">
+                    ♡
+                </button>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <div class="product-type">
+                    JACKET
+                </div>
+
+                <h3 class="product-name">
+                    کت اسپرت مردانه
+                </h3>
+
+                <div class="product-bottom">
+
+                    <span class="price">
+                        ۲,۳۹۰,۰۰۰ تومان
+                    </span>
+
+                    <button class="add-cart"
+                            data-product="کت اسپرت مردانه">
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <article class="product-card"
+                 data-category="pants"
+                 data-name="شلوار کتان مردانه">
+
+
+            <div class="product-image">
+
+                <span class="badge">
+                    محبوب
+                </span>
+
+                <button class="favorite">
+                    ♡
+                </button>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <div class="product-type">
+                    PANTS
+                </div>
+
+                <h3 class="product-name">
+                    شلوار کتان مردانه
+                </h3>
+
+                <div class="product-bottom">
+
+                    <span class="price">
+                        ۱,۲۹۰,۰۰۰ تومان
+                    </span>
+
+                    <button class="add-cart"
+                            data-product="شلوار کتان مردانه">
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+    </section>
+
+
+</main>
+
+
+
+<!-- TOAST -->
+
+<div class="toast" id="toast"></div>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+
+    <div class="footer">
+
+
+        <div>
+
+
+            <div class="footer-logo">
+
+                VIORA
+
+            </div>
+
+
+            <p class="footer-text">
+
+                استایل تو، انتخاب تو.
+
+            </p>
+
+
+        </div>
+
+
+
+        <div class="footer-links">
+
+
+            <a href="viorahome.html">
+                خانه
+            </a>
+
+
+            <a href="categories.html">
+                دسته‌بندی‌ها
+            </a>
+
+
+            <a href="products.html">
+                همه محصولات
+            </a>
+
+
+            <a href="about.html">
+                درباره ما
+            </a>
+
+
+        </div>
+
+
+    </div>
+
+
+</footer>
+
+
+
+<script>
+
+
+/* FILTER */
+
+const filterButtons =
+    document.querySelectorAll(".filter-btn");
+
+const products =
+    document.querySelectorAll(".product-card");
+
+
+filterButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        filterButtons.forEach(btn =>
+            btn.classList.remove("active")
+        );
+
+        button.classList.add("active");
+
+        const filter =
+            button.dataset.filter;
+
+
+        products.forEach(product => {
+
+            if (
+                filter === "all" ||
+                product.dataset.category === filter
+            ) {
+
+                product.style.display = "block";
+
+            }
+
+            else {
+
+                product.style.display = "none";
+
+            }
+
+        });
+
+    });
+
+});
+
+
+
+/* SEARCH */
+
+const searchInput =
+    document.getElementById("searchInput");
+
+
+searchInput.addEventListener("input", () => {
+
+    const search =
+        searchInput.value
+            .trim()
+            .toLowerCase();
+
+
+    products.forEach(product => {
+
+        const name =
+            product.dataset.name
+                .toLowerCase();
+
+
+        if (name.includes(search)) {
+
+            product.style.display = "block";
+
+        }
+
+        else {
+
+            product.style.display = "none";
+
+        }
+
+    });
+
+});
+
+
+
+/* FAVORITE */
+
+document
+    .querySelectorAll(".favorite")
+    .forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            button.classList.toggle("liked");
+
+            if (
+                button.classList.contains("liked")
+            ) {
+
+                button.textContent = "♥";
+
+                showToast(
+                    "به علاقه‌مندی‌ها اضافه شد ❤️"
+                );
+
+            }
+
+            else {
+
+                button.textContent = "♡";
+
+            }
+
+        });
+
+    });
+
+
+
+/* CART */
+
+document
+    .querySelectorAll(".add-cart")
+    .forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            const product =
+                button.dataset.product;
+
+
+            showToast(
+                product +
+                " به سبد خرید اضافه شد 🛍️"
+            );
+
+
+            button.textContent = "✓";
+
+
+            setTimeout(() => {
+
+                button.textContent = "+";
+
+            }, 1200);
+
+        });
+
+    });
+
+
+
+/* TOAST */
+
+const toast =
+    document.getElementById("toast");
+
+
+let toastTimer;
+
+
+function showToast(message) {
+
+    toast.textContent = message;
+
+    toast.classList.add("show");
+
+    clearTimeout(toastTimer);
+
+
+    toastTimer = setTimeout(() => {
+
+        toast.classList.remove("show");
+
+    }, 2200);
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>
+```
